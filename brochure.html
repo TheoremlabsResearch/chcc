@@ -37,8 +37,8 @@
 
     /* ─── Page Setup ───────────────────────────────── */
     .page {
-      width: 8.5in;
-      min-height: 11in;
+      width: 210mm;
+      min-height: 297mm;
       margin: 0 auto 0.5in;
       background: var(--cream);
       position: relative;
@@ -1309,35 +1309,123 @@
 
     /* ─── Print Styles ─────────────────────────────── */
     @media print {
-      body {
-        background: none;
-        margin: 0;
-      }
+      body { background: none; margin: 0; padding: 0; }
 
       .page {
         margin: 0;
         box-shadow: none;
         page-break-after: always;
+        break-after: page;
         page-break-inside: avoid;
-        width: 100%;
-        min-height: 100vh;
+        break-inside: avoid;
+        width: 210mm;
+        height: 297mm;
+        min-height: unset;
+        overflow: hidden;
       }
 
-      .page:last-child {
-        page-break-after: auto;
-      }
+      .page:last-child { page-break-after: auto; break-after: auto; }
 
-      @page {
-        size: letter portrait;
-        margin: 0;
-      }
+      @page { size: A4 portrait; margin: 0; }
+
+      /* ── Cover page ── */
+      #cover { padding: 0.6in 0.8in; }
+      #cover h1 { font-size: 56px; }
+      #cover .cover-tagline { font-size: 16px; margin-bottom: 36px; }
+      #cover .cover-divider { margin: 0 auto 36px; }
+
+      /* ── Opportunity page ── */
+      #opportunity .opp-left { padding: 0.55in 0.45in; }
+      #opportunity .opp-right { padding: 0.55in 0.5in; }
+      #opportunity .opp-left h2 { font-size: 36px; }
+      #opportunity .opp-left .stat-item .stat-num { font-size: 42px; }
+      #opportunity .opp-right h3 { font-size: 24px; margin-bottom: 14px; }
+      #opportunity .opp-right p { font-size: 12.5px; margin-bottom: 12px; }
+      #opportunity .need-list { margin: 16px 0; }
+      #opportunity .need-list li { font-size: 12px; margin-bottom: 10px; }
+
+      /* ── Pillars page ── */
+      #pillars { padding: 0.4in 0.55in; }
+      #pillars .pillars-header { margin-bottom: 0.25in; }
+      #pillars .pillars-header h2 { font-size: 34px; }
+      #pillars .pillars-header p { font-size: 13px; }
+      .pillars-grid { gap: 14px; margin-bottom: 22px; }
+      .pillar-card { padding: 20px 18px; }
+      .pillar-card h3 { font-size: 18px; margin-bottom: 8px; }
+      .pillar-card p { font-size: 12px; margin-bottom: 12px; }
+      .pillar-card .pillar-icon { margin-bottom: 12px; }
+
+      /* ── Facility page ── */
+      #facility { padding: 0.35in 0.5in; }
+      #facility .facility-header { margin-bottom: 0.22in; }
+      #facility .facility-header-left h2 { font-size: 32px; }
+      #facility .facility-map { margin-bottom: 18px; }
+      #facility .facility-map .map-zone { padding: 14px 18px; }
+      #facility .facility-map .map-zone h4 { font-size: 13px; margin-bottom: 5px; }
+      #facility .facility-map .map-zone .zone-items { font-size: 11px; line-height: 1.55; }
+      #facility .facility-highlights { gap: 12px; }
+      #facility .facility-highlight-card { padding: 12px 12px; }
+      #facility .facility-highlight-card h4 { font-size: 12px; }
+      #facility .facility-highlight-card p { font-size: 10.5px; }
+
+      /* ── Programs & Impact page ── */
+      #programs-impact { padding: 0.35in 0.55in; }
+      #programs-impact .pi-header { margin-bottom: 20px; }
+      #programs-impact .pi-header h2 { font-size: 30px; }
+      #programs-impact .pi-header p { font-size: 12.5px; }
+      .programs-grid { gap: 10px; margin-bottom: 20px; }
+      .program-card .pc-header { height: 56px; }
+      .program-card .pc-body { padding: 10px 14px 12px; }
+      .program-card .pc-body p { font-size: 11px; }
+      .impact-strip { padding: 20px 26px; margin-bottom: 16px; }
+      .impact-strip h3 { font-size: 18px; margin-bottom: 16px; }
+      .impact-metric .metric-num { font-size: 34px; }
+      .testimonial-row { gap: 10px; }
+      .testimonial-card { padding: 12px 16px; }
+      .testimonial-card p { font-size: 11px; }
+
+      /* ── Donate page — most content-heavy, needs most compression ── */
+      #donate { padding: 0.28in 0.48in; }
+      #donate .donate-header { margin-bottom: 0.14in; }
+      #donate .donate-header h2 { font-size: 26px; margin-bottom: 5px; }
+      #donate .donate-header p { font-size: 11.5px; }
+      .track-label { margin-bottom: 10px; margin-top: 0; }
+      .track-label h3 { font-size: 15px; }
+      .tiers-grid { gap: 6px; margin-bottom: 12px; grid-template-columns: repeat(4,1fr); }
+      .tier-card { padding: 10px 8px; border-radius: 8px; }
+      .tier-card .tier-name { font-size: 9px; margin-bottom: 4px; }
+      .tier-card .tier-amount { font-size: 17px; margin-bottom: 5px; }
+      .tier-card .tier-desc { font-size: 9.5px; }
+      .pledge-section { padding: 16px 20px; margin-bottom: 12px; border-radius: 12px; }
+      .pledge-section .pledge-header { margin-bottom: 12px; }
+      .pledge-section .pledge-header-left h3 { font-size: 14px; }
+      .pledge-section .pledge-header-left .eyebrow { margin-bottom: 4px; }
+      .pledge-amount-badge { padding: 6px 10px; }
+      .pledge-amount-badge .pa-amount { font-size: 15px; }
+      .pledge-options { gap: 8px; }
+      .pledge-option { padding: 10px 10px; border-radius: 8px; }
+      .pledge-option .po-number { font-size: 9px; margin-bottom: 4px; }
+      .pledge-option h4 { font-size: 12px; margin-bottom: 5px; }
+      .pledge-option p { font-size: 9.5px; line-height: 1.45; }
+      .pledge-option .po-highlight { padding: 5px 7px; font-size: 9px; margin-top: 6px; border-radius: 4px; }
+      .budget-breakdown { padding: 12px 16px; border-radius: 8px; }
+      .budget-breakdown h4 { font-size: 11px; margin-bottom: 8px; }
+      .budget-row { margin-bottom: 6px; }
+      .budget-row .br-label { font-size: 10.5px; min-width: 1.9in; }
+      .budget-row .br-bar-wrap { height: 6px; }
+      .budget-row .br-amount { font-size: 10.5px; }
+
+      /* ── Back cover ── */
+      #backcover { padding: 0.7in 0.8in; }
+      #backcover h2 { font-size: 42px; }
+      #backcover .bc-sub { font-size: 14px; margin-bottom: 40px; }
+      .cta-actions { margin-bottom: 48px; }
+      .contact-grid { margin-bottom: 44px; }
     }
 
     /* ─── Screen helpers ───────────────────────────── */
     @media screen {
-      body {
-        padding: 0.4in 0;
-      }
+      body { padding: 0.4in 0; }
     }
   </style>
 </head>

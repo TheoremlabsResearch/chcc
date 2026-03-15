@@ -33,8 +33,8 @@
     body { font-family: 'Inter', sans-serif; color: var(--charcoal); background: #ccc; }
 
     .page {
-      width: 8.5in;
-      min-height: 11in;
+      width: 210mm;
+      min-height: 297mm;
       margin: 0 auto 0.5in;
       background: var(--cream);
       position: relative;
@@ -233,15 +233,78 @@
     }
 
     @media print {
-      body { background: #fff; }
+      body { background: none; margin: 0; padding: 0; }
+
       .page {
-        width: 100%;
         margin: 0;
         box-shadow: none;
         page-break-after: always;
-        min-height: 100vh;
+        break-after: page;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        width: 210mm;
+        height: 297mm;
+        min-height: unset;
+        overflow: hidden;
       }
-      @page { size: letter portrait; margin: 0; }
+
+      .page:last-child { page-break-after: auto; break-after: auto; }
+
+      @page { size: A4 portrait; margin: 0; }
+
+      /* ── Cover ── */
+      #cover { padding: 0.6in 0.8in; }
+      #cover h1 { font-size: 2.8rem; }
+      #cover .subtitle { font-size: 0.93rem; margin-bottom: 26px; }
+      #cover .cover-stats { margin-bottom: 28px; }
+      #cover .cover-stat { padding: 14px 10px; }
+      #cover .cover-stat .n { font-size: 1.5rem; }
+
+      /* ── Inner pages — base compression ── */
+      .inner-page { padding: 0.38in 0.48in; }
+      .page-header { padding-bottom: 10px; margin-bottom: 16px; }
+      .page-header h2 { font-size: 1.3rem; }
+
+      /* ── Page 2: Market Opportunity ── */
+      .body { font-size: 0.78rem; margin-bottom: 8px; }
+      .callout { padding: 9px 12px; margin-bottom: 10px; }
+      .callout p { font-size: 0.76rem; }
+      table { font-size: 0.75rem; }
+      th { padding: 6px 8px; font-size: 0.65rem; }
+      td { padding: 5px 8px; }
+      .two-col { gap: 16px; }
+
+      /* ── Page 3: Revenue Model ── */
+      h3.sub { font-size: 0.88rem; margin-top: 12px; margin-bottom: 8px; }
+      .small { font-size: 0.67rem; margin-top: 4px; }
+
+      /* ── Page 4: Operating Costs ── */
+      .bar-chart { gap: 6px; margin-bottom: 14px; }
+      .bar-row { gap: 8px; }
+      .bar-label { font-size: 0.66rem; width: 52px; }
+      .bar-fill span { font-size: 0.62rem; }
+      .metrics-row { gap: 9px; margin-top: 12px; }
+      .metric-box { padding: 12px 10px; }
+      .metric-box .num { font-size: 1.6rem; }
+      .metric-box .label { font-size: 0.64rem; }
+
+      /* ── Page 5: Loan Repayment ── */
+
+      /* ── Page 6: Timeline & Risk ── */
+      .timeline { padding-left: 22px; }
+      .timeline-item { margin-bottom: 10px; padding-left: 8px; }
+      .timeline-item .year { font-size: 0.62rem; }
+      .timeline-item .milestone { font-size: 0.78rem; }
+      .timeline-item .detail { font-size: 0.7rem; }
+      .risk { font-size: 0.6rem; padding: 2px 6px; }
+
+      /* ── Back cover ── */
+      #back { padding: 0.6in 0.8in; }
+      #back h2 { font-size: 2rem; margin-bottom: 12px; }
+      #back .back-sub { font-size: 0.88rem; margin-bottom: 28px; }
+      .back-actions { margin-bottom: 32px; }
+      .back-contact { margin-bottom: 28px; }
+      .back-btn { padding: 11px 22px; font-size: 0.75rem; }
     }
 
     /* ══════════════════════════════════════════════════

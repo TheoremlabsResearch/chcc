@@ -166,10 +166,12 @@ Every Community Loan donor receives a permanent named dedication, regardless of 
 
 | Pledge Amount | Naming Opportunity |
 |-------------|-------------------|
-| $25,000 | Named classroom or Ayurvedic treatment room |
-| $50,000 | Named dance studio, Kalari arena, or garden section |
+| $50,000 | Named dance studio, Kalari arena, or Ayurvedic Suite |
 | $100,000 | Named wing — Aum School Wing, Wellness Wing, or Gaushala |
+| $150,000 | Named hall — main auditorium section or Gaushala sanctuary |
 | $250,000+ | Lead campus naming — entire building or main entrance |
+
+*Note: Track A donors at the Nurture tier ($25,001+) receive a named Ayurvedic treatment room or classroom dedication.*
 
 ### Pledge Process
 1. Donor selects loan structure, term, and amount via CHCC website.

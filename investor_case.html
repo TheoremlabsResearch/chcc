@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHCC — The Investment Case | South Charlotte 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --saffron:      #F47C36;
+      --saffron-dark: #D4621E;
+      --green:        #4A7C59;
+      --green-dark:   #3A6347;
+      --teak:         #8B5A2B;
+      --cream:        #FDFBF7;
+      --ivory:        #F5F0E8;
+      --turmeric:     #F9E4C8;
+      --sandalwood:   #C4956A;
+      --charcoal:     #2D2D2D;
+      --gray:         #6B7280;
+      --light:        #E5E7EB;
+      --white:        #FFFFFF;
+      --navy:         #1A2340;
+      --gold:         #D4A017;
+    }
+
+    html { font-size: 16px; }
+    body { font-family: 'Inter', sans-serif; color: var(--charcoal); background: #ccc; }
+
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto 0.5in;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.18);
+    }
+
+    .serif   { font-family: 'Playfair Display', Georgia, serif; }
+    .deva    { font-family: 'Noto Serif Devanagari', serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    h1 { font-weight: 900; }
+    h2 { font-weight: 700; }
+    h3 { font-weight: 600; }
+    h4 { font-family: 'Inter', sans-serif; font-weight: 600; }
+
+    .tag {
+      display: inline-block;
+      background: var(--saffron);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .tag-green { background: var(--green); }
+    .tag-navy  { background: var(--navy); }
+
+    /* ════ TABLE STYLES ════ */
+    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    th {
+      background: var(--charcoal);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th.saffron-head { background: var(--saffron); }
+    th.green-head   { background: var(--green); }
+    th.navy-head    { background: var(--navy); }
+    td {
+      padding: 7px 10px;
+      border-bottom: 1px solid var(--light);
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+    tr:nth-child(even) td { background: rgba(244,124,54,0.04); }
+    tr.highlight td {
+      background: var(--turmeric);
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+    tr.green-row td { background: rgba(74,124,89,0.08); font-weight: 600; color: var(--green-dark); }
+
+    /* ════ METRIC BOXES ════ */
+    .metrics-row {
+      display: flex;
+      gap: 12px;
+    }
+    .metric-box {
+      flex: 1;
+      border-radius: 8px;
+      padding: 16px 14px;
+      text-align: center;
+    }
+    .metric-box .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .metric-box .label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      opacity: 0.85;
+    }
+    .metric-box.saffron { background: var(--saffron); color: #fff; }
+    .metric-box.green   { background: var(--green);   color: #fff; }
+    .metric-box.teak    { background: var(--teak);    color: #fff; }
+    .metric-box.navy    { background: var(--navy);    color: #fff; }
+    .metric-box.ivory   { background: var(--ivory);   color: var(--charcoal); border: 2px solid var(--sandalwood); }
+
+    /* ════ SECTION HEADERS ════ */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .section-header .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    /* ════ TIMELINE ════ */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--saffron), var(--green));
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 14px;
+      padding-left: 10px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -23px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--saffron);
+      border: 2px solid var(--cream);
+      box-shadow: 0 0 0 2px var(--saffron);
+    }
+    .timeline-item.done::before { background: var(--green); box-shadow: 0 0 0 2px var(--green); }
+    .timeline-item .year {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 1px;
+    }
+    .timeline-item.done .year { color: var(--green); }
+    .timeline-item .milestone { font-size: 0.83rem; font-weight: 600; color: var(--charcoal); }
+    .timeline-item .detail   { font-size: 0.76rem; color: var(--gray); margin-top: 1px; }
+
+    /* ════ BAR CHART ════ */
+    .bar-chart { display: flex; flex-direction: column; gap: 8px; }
+    .bar-row { display: flex; align-items: center; gap: 10px; }
+    .bar-label { font-size: 0.72rem; font-weight: 600; width: 60px; flex-shrink: 0; color: var(--charcoal); }
+    .bar-track { flex: 1; background: var(--light); border-radius: 4px; height: 22px; overflow: hidden; }
+    .bar-fill   { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 8px; }
+    .bar-fill span { font-size: 0.68rem; font-weight: 700; color: #fff; white-space: nowrap; }
+    .bar-fill.revenue { background: linear-gradient(90deg, var(--green), var(--green-dark)); }
+    .bar-fill.expense { background: linear-gradient(90deg, var(--teak), #6B3A1F); }
+    .bar-fill.surplus { background: linear-gradient(90deg, var(--saffron), var(--saffron-dark)); }
+
+    /* ════ CALLOUT BOXES ════ */
+    .callout {
+      border-left: 4px solid var(--saffron);
+      background: var(--turmeric);
+      padding: 12px 14px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 14px;
+    }
+    .callout.green-callout {
+      border-left-color: var(--green);
+      background: rgba(74,124,89,0.08);
+    }
+    .callout.navy-callout {
+      border-left-color: var(--navy);
+      background: rgba(26,35,64,0.06);
+    }
+    .callout p { font-size: 0.83rem; line-height: 1.55; }
+    .callout strong { color: var(--saffron-dark); }
+    .callout.green-callout strong { color: var(--green-dark); }
+    .callout.navy-callout strong  { color: var(--navy); }
+
+    /* ════ RISK BADGE ════ */
+    .risk { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+    .risk-low  { background: #D1FAE5; color: #065F46; }
+    .risk-med  { background: #FEF3C7; color: #92400E; }
+    .risk-high { background: #FEE2E2; color: #991B1B; }
+
+    /* ════ DECORATIVE SVG ════ */
+    .lotus-bg {
+      position: absolute;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        min-height: 100vh;
+      }
+      @page { size: letter portrait; margin: 0; }
+    }
+
+    /* ══════════════════════════════════════════════════
+       PAGE 1 — COVER
+    ══════════════════════════════════════════════════ */
+    #cover {
+      background: linear-gradient(150deg, #0F1E2E 0%, #1A2E1F 55%, #2D1A0E 100%);
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.8in 1in;
+      position: relative;
+    }
+    #cover .cover-ring {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6.5in; height: 6.5in;
+      border-radius: 50%;
+      border: 1px solid rgba(244,124,54,0.12);
+    }
+    #cover .cover-ring-2 {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 5in; height: 5in;
+      border-radius: 50%;
+      border: 1px solid rgba(74,124,89,0.15);
+    }
+    #cover .eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 20px;
+    }
+    #cover h1 {
+      font-size: 3.4rem;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    #cover h1 em {
+      font-style: italic;
+      color: var(--saffron);
+    }
+    #cover .subtitle {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.72);
+      font-weight: 300;
+      max-width: 4.5in;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    #cover .cover-stats {
+      display: flex;
+      gap: 0;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+    #cover .cover-stat {
+      flex: 1;
+      padding: 18px 14px;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    #cover .cover-stat:last-child { border-right: none; }
+    #cover .cover-stat .n {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--saffron);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    #cover .cover-stat .l {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+    #cover .deva-text {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 8px;
+    }
+    #cover .tag-line {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.06em;
+    }
+    #cover .bottom-bar {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: var(--saffron);
+      padding: 14px 0.8in;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #cover .bottom-bar span {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ══════════════════════════════════════════════════
+       SHARED INNER PAGES
+    ══════════════════════════════════════════════════ */
+    .inner-page {
+      padding: 0.55in 0.65in;
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+    }
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--saffron);
+      margin-bottom: 22px;
+    }
+    .page-header h2 { font-size: 1.55rem; color: var(--charcoal); line-height: 1.2; }
+    .page-header .page-num {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--gray);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      padding-top: 4px;
+    }
+    .section-title {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 8px;
+    }
+    .green-title { color: var(--green); }
+    .navy-title  { color: var(--navy); }
+
+    .two-col { display: flex; gap: 20px; }
+    .two-col .col { flex: 1; }
+    .two-col .col-40 { flex: 0 0 40%; }
+    .two-col .col-60 { flex: 1; }
+
+    .page-footer {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .page-footer span { font-size: 0.65rem; color: var(--gray); letter-spacing: 0.05em; }
+    .page-footer .logo-small { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--saffron); font-size: 0.78rem; }
+
+    h3.sub { font-size: 0.95rem; color: var(--charcoal); margin-bottom: 10px; margin-top: 16px; }
+    p.body { font-size: 0.82rem; line-height: 1.6; color: var(--charcoal); margin-bottom: 10px; }
+    .small { font-size: 0.72rem; color: var(--gray); font-style: italic; margin-top: 6px; line-height: 1.4; }
+
+    /* ══════════════════════════════════════════════════
+       PAGE 7 — BACK COVER
+    ══════════════════════════════════════════════════ */
+    #back {
+      background: linear-gradient(160deg, #1A2E1F 0%, #0F1E2E 60%, #2D1A0E 100%);
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0.8in 1in;
+      position: relative;
+    }
+    #back h2 { font-size: 2.4rem; color: #fff; margin-bottom: 16px; line-height: 1.2; }
+    #back h2 em { color: var(--saffron); font-style: italic; }
+    #back .back-sub { font-size: 0.95rem; color: rgba(255,255,255,0.65); max-width: 4.8in; margin: 0 auto 40px; line-height: 1.65; }
+    .back-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .back-btn {
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .back-btn.primary { background: var(--saffron); color: #fff; }
+    .back-btn.secondary { border: 2px solid rgba(255,255,255,0.4); color: rgba(255,255,255,0.8); }
+    .back-contact {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .back-contact .contact-item { text-align: center; }
+    .back-contact .contact-item .cl { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--saffron); margin-bottom: 4px; }
+    .back-contact .contact-item .cv { font-size: 0.82rem; color: rgba(255,255,255,0.75); }
+    .back-deva { font-family: 'Noto Serif Devanagari', serif; font-size: 1.8rem; color: rgba(255,255,255,0.2); margin-bottom: 12px; }
+    .back-tagline { font-size: 0.72rem; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════
+     PAGE 1 — COVER
+════════════════════════════════════════════════ -->
+<div class="page" id="cover">
+  <div class="cover-ring"></div>
+  <div class="cover-ring-2"></div>
+
+  <div class="eyebrow">Charlotte Hindu Community Center · The Investment Case · 2025</div>
+
+  <h1>Why <em>This</em> Project,<br>Why <em>South Charlotte</em>,<br>Why <em>Now</em></h1>
+  <p class="subtitle">A financial analysis demonstrating how a $2M capital campaign generates $3.2M in annual revenue, repays every community loan, and builds an institution that serves Charlotte for generations.</p>
+
+  <div class="cover-stats">
+    <div class="cover-stat">
+      <div class="n">40,000+</div>
+      <div class="l">Indian-Americans<br>in South Charlotte</div>
+    </div>
+    <div class="cover-stat">
+      <div class="n">$0</div>
+      <div class="l">Dedicated Hindu<br>Community Centers<br>in Charlotte today</div>
+    </div>
+    <div class="cover-stat">
+      <div class="n">Year 2</div>
+      <div class="l">Break-even on<br>full operations</div>
+    </div>
+    <div class="cover-stat">
+      <div class="n">2.8×</div>
+      <div class="l">Surplus coverage<br>of all loan<br>obligations</div>
+    </div>
+  </div>
+
+  <div class="deva-text">धर्मो रक्षति रक्षितः</div>
+  <div class="tag-line">Dharma protects those who protect it · Manu Smriti 8.15</div>
+
+  <div class="bottom-bar">
+    <span>CHCC · Charlotte, NC · 501(c)(3) Nonprofit</span>
+    <span>Confidential — For Community Investors &amp; Loan Donors</span>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     PAGE 2 — THE SOUTH CHARLOTTE OPPORTUNITY
+════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="page-header">
+      <h2>The South Charlotte Market:<br>A $40M+ Opportunity Untouched</h2>
+      <div class="page-num">Page 2 of 7</div>
+    </div>
+
+    <div class="two-col" style="margin-bottom:20px;">
+      <div class="col-60">
+        <div class="section-title">The Community</div>
+        <p class="body">The Ballantyne–Matthews–Waxhaw corridor is the fastest-growing Indian-American settlement zone in the Southeast. Over <strong>40,000 Indian-American residents</strong> live within a 15-minute drive of the proposed CHCC site — a density comparable to the suburbs of Northern Virginia and the Greater Houston corridor, both of which have supported multiple thriving Hindu community centers for decades.</p>
+        <p class="body">Despite this density, Charlotte has <strong>zero dedicated, multi-program Hindu community centers.</strong> Events happen in rented church halls, hotel ballrooms, and private driveways. Every cultural program, every yoga class, every Diwali celebration competes for time on a calendar that belongs to someone else.</p>
+
+        <div class="callout" style="margin-top:14px;">
+          <p><strong>The Wallet Share Insight:</strong> South Charlotte Indian-American households spend an estimated $3,000–$12,000 annually on cultural programming, tutoring, yoga classes, and community events — almost entirely at facilities with no connection to their values. CHCC captures this spending and redirects it into a community-owned institution.</p>
+        </div>
+      </div>
+      <div class="col-40">
+        <div class="section-title">Market Snapshot</div>
+        <table style="margin-bottom:16px;">
+          <tr><th class="saffron-head" colspan="2">South Charlotte Demographics</th></tr>
+          <tr><td>Indian-Americans (est.)</td><td><strong>40,000+</strong></td></tr>
+          <tr><td>Greater Charlotte total</td><td><strong>80,000+</strong></td></tr>
+          <tr><td>Median HH income</td><td><strong>$140K–$175K</strong></td></tr>
+          <tr><td>Advanced degree rate</td><td><strong>72%</strong></td></tr>
+          <tr><td>Primary professions</td><td>IT, Medicine, Finance</td></tr>
+          <tr><td>School-age children</td><td>High density</td></tr>
+          <tr class="highlight"><td>Existing CHCC competitor</td><td>ZERO</td></tr>
+        </table>
+
+        <div class="section-title navy-title">Why South Charlotte Wins</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--saffron);margin-top:5px;flex-shrink:0;"></div>
+            <div style="font-size:0.78rem;line-height:1.5;"><strong>Density:</strong> Highest concentration of Indian households per sq mi in the Carolinas</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--saffron);margin-top:5px;flex-shrink:0;"></div>
+            <div style="font-size:0.78rem;line-height:1.5;"><strong>Income:</strong> Purchasing power to sustain premium wellness + education programs</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--saffron);margin-top:5px;flex-shrink:0;"></div>
+            <div style="font-size:0.78rem;line-height:1.5;"><strong>Families:</strong> High proportion of children 5–18 — the core Aum School demographic</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--saffron);margin-top:5px;flex-shrink:0;"></div>
+            <div style="font-size:0.78rem;line-height:1.5;"><strong>Donors:</strong> Physicians, attorneys, entrepreneurs — ideal Community Loan candidates</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--green);margin-top:5px;flex-shrink:0;"></div>
+            <div style="font-size:0.78rem;line-height:1.5;"><strong>Zero alternatives:</strong> No authentic Hindu-context yoga studio, Bharatanatyam academy, Ayurvedic clinic, or Gaushala anywhere in Charlotte.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title" style="margin-top:6px;">Comparable Markets — What Peer Cities Built</div>
+    <table>
+      <tr>
+        <th class="navy-head">City / Institution</th>
+        <th class="navy-head">Indian-American Pop.</th>
+        <th class="navy-head">Year Est.</th>
+        <th class="navy-head">Annual Revenue (Yr 5)</th>
+        <th class="navy-head">Outcome</th>
+      </tr>
+      <tr><td>JCC Greater Boston</td><td>Comparable</td><td>1970</td><td>$22M+</td><td>Mortgage-free, civic anchor</td></tr>
+      <tr><td>S3 Gaushala, Memphis</td><td>Smaller</td><td>2015</td><td>$600K+ (single program)</td><td>Fully self-sustaining</td></tr>
+      <tr><td>Keshavam, Washington DC</td><td>Larger</td><td>2018</td><td>$1.2M+ (no facility)</td><td>Zero debt</td></tr>
+      <tr><td>Hindu Temple of NC, Charlotte</td><td>Same</td><td>1987</td><td>$1.8M+</td><td>Mortgage retired Year 9</td></tr>
+      <tr class="green-row"><td><strong>CHCC (projected)</strong></td><td><strong>40,000+ (South Charlotte)</strong></td><td><strong>2026</strong></td><td><strong>$3.2M (Year 3)</strong></td><td><strong>Loan-free by Year 5</strong></td></tr>
+    </table>
+
+    <div class="page-footer">
+      <span class="logo-small">CHCC · Charlotte Hindu Community Center</span>
+      <span>Charlotte, NC · 501(c)(3) · EIN Provided on Request</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     PAGE 3 — THE REVENUE MODEL
+════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="page-header">
+      <h2>The Revenue Model:<br>9 Streams, Zero Donation Dependence by Year 3</h2>
+      <div class="page-num">Page 3 of 7</div>
+    </div>
+
+    <div class="callout green-callout" style="margin-bottom:18px;">
+      <p><strong>Core Insight:</strong> CHCC is a service business, not a charity. The $2M capital campaign funds the infrastructure. The infrastructure generates recurring revenue. The revenue repays loans, funds operations, and builds endowment. Donations become a growth accelerant — not a survival mechanism.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="col-60">
+        <div class="section-title">Revenue Projections by Stream</div>
+        <table style="margin-bottom:12px;">
+          <tr>
+            <th class="green-head">Revenue Stream</th>
+            <th class="green-head" style="text-align:right;">Year 1</th>
+            <th class="green-head" style="text-align:right;">Year 2</th>
+            <th class="green-head" style="text-align:right;">Year 3</th>
+          </tr>
+          <tr><td>Aum School Tuition (50→100→200 students)</td><td style="text-align:right;">$400K</td><td style="text-align:right;">$900K</td><td style="text-align:right;">$1,600K</td></tr>
+          <tr><td>Yoga &amp; Wellness Memberships</td><td style="text-align:right;">$120K</td><td style="text-align:right;">$220K</td><td style="text-align:right;">$350K</td></tr>
+          <tr><td>Ayurvedic Treatments</td><td style="text-align:right;">$60K</td><td style="text-align:right;">$110K</td><td style="text-align:right;">$180K</td></tr>
+          <tr><td>Heritage Arts Programs</td><td style="text-align:right;">$80K</td><td style="text-align:right;">$145K</td><td style="text-align:right;">$220K</td></tr>
+          <tr><td>Gaushala (Meet &amp; Feed, A2 CSA, sponsorships)</td><td style="text-align:right;">$45K</td><td style="text-align:right;">$100K</td><td style="text-align:right;">$180K</td></tr>
+          <tr><td>Sattvic Food Court &amp; Juice Bar</td><td style="text-align:right;">$90K</td><td style="text-align:right;">$180K</td><td style="text-align:right;">$300K</td></tr>
+          <tr><td>Vedic Retail Store</td><td style="text-align:right;">$30K</td><td style="text-align:right;">$65K</td><td style="text-align:right;">$120K</td></tr>
+          <tr><td>Event Rentals</td><td style="text-align:right;">$40K</td><td style="text-align:right;">$90K</td><td style="text-align:right;">$150K</td></tr>
+          <tr><td>Corporate Wellness Partnerships</td><td style="text-align:right;">$25K</td><td style="text-align:right;">$60K</td><td style="text-align:right;">$100K</td></tr>
+          <tr class="highlight"><td><strong>Total Earned Revenue</strong></td><td style="text-align:right;"><strong>$890K</strong></td><td style="text-align:right;"><strong>$1,870K</strong></td><td style="text-align:right;"><strong>$3,200K</strong></td></tr>
+        </table>
+
+        <div class="small">Projections based on comparable institutions (S3 Gaushala, JCC, Sivananda centers). Aum School tuition set at $8,000/student/year — well below South Charlotte private school average of $14,000–$22,000.</div>
+      </div>
+
+      <div class="col-40">
+        <div class="section-title">Why These Numbers Are Conservative</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="background:var(--ivory);border-radius:6px;padding:10px 12px;">
+            <div style="font-size:0.7rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;">Aum School · $1.6M/yr</div>
+            <div style="font-size:0.75rem;line-height:1.45;">$8K/student — 45% below South Charlotte private school avg. Waitlist expected within 6 months of opening.</div>
+          </div>
+          <div style="background:var(--ivory);border-radius:6px;padding:10px 12px;">
+            <div style="font-size:0.7rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;">Yoga Memberships · $350K/yr</div>
+            <div style="font-size:0.75rem;line-height:1.45;">$80/month — below Lifetime ($100+) and boutique studios ($150+). 365 members hits target.</div>
+          </div>
+          <div style="background:var(--ivory);border-radius:6px;padding:10px 12px;">
+            <div style="font-size:0.7rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;">Gaushala · $180K/yr</div>
+            <div style="font-size:0.75rem;line-height:1.45;">S3 Gaushala (Memphis) generates $180K+ from 15 cows &amp; 3 programs. CHCC models on their proven benchmark.</div>
+          </div>
+          <div style="background:var(--ivory);border-radius:6px;padding:10px 12px;">
+            <div style="font-size:0.7rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:3px;">Food Court · $300K/yr</div>
+            <div style="font-size:0.75rem;line-height:1.45;">100 covers/day × $9 avg × 330 operating days = $297K. Conservative for a captive community audience.</div>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:14px;">
+          <p><strong>Aum School alone covers facility lease</strong> — 200 students × $8K = $1.6M vs. $240K annual lease. Tuition is CHCC's anchor revenue stream, independent of all other programming.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="logo-small">CHCC · Charlotte Hindu Community Center</span>
+      <span>Charlotte, NC · 501(c)(3) · EIN Provided on Request</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     PAGE 4 — OPERATING COSTS & PROFITABILITY
+════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="page-header">
+      <h2>Operating Costs &amp; Path to Profitability</h2>
+      <div class="page-num">Page 4 of 7</div>
+    </div>
+
+    <div class="two-col" style="margin-bottom:20px;">
+      <div class="col-60">
+        <div class="section-title">Operating Expense Projections</div>
+        <table style="margin-bottom:14px;">
+          <tr>
+            <th class="navy-head">Expense Category</th>
+            <th class="navy-head" style="text-align:right;">Year 1</th>
+            <th class="navy-head" style="text-align:right;">Year 2</th>
+            <th class="navy-head" style="text-align:right;">Year 3</th>
+          </tr>
+          <tr><td>Facility Lease / Occupancy</td><td style="text-align:right;">$200K</td><td style="text-align:right;">$220K</td><td style="text-align:right;">$240K</td></tr>
+          <tr><td>Staff (10 → 18 → 28 FTE)</td><td style="text-align:right;">$500K</td><td style="text-align:right;">$720K</td><td style="text-align:right;">$960K</td></tr>
+          <tr><td>Program Delivery &amp; Supplies</td><td style="text-align:right;">$60K</td><td style="text-align:right;">$90K</td><td style="text-align:right;">$130K</td></tr>
+          <tr><td>Marketing &amp; Community Outreach</td><td style="text-align:right;">$30K</td><td style="text-align:right;">$40K</td><td style="text-align:right;">$50K</td></tr>
+          <tr><td>Insurance, Legal &amp; Compliance</td><td style="text-align:right;">$25K</td><td style="text-align:right;">$28K</td><td style="text-align:right;">$30K</td></tr>
+          <tr><td>Utilities, Maintenance &amp; IT</td><td style="text-align:right;">$35K</td><td style="text-align:right;">$45K</td><td style="text-align:right;">$55K</td></tr>
+          <tr class="highlight"><td><strong>Total Operating Expenses</strong></td><td style="text-align:right;"><strong>$850K</strong></td><td style="text-align:right;"><strong>$1,143K</strong></td><td style="text-align:right;"><strong>$1,465K</strong></td></tr>
+        </table>
+
+        <div class="section-title">Net Operating Surplus</div>
+        <table style="margin-bottom:14px;">
+          <tr>
+            <th class="saffron-head"></th>
+            <th class="saffron-head" style="text-align:right;">Year 1</th>
+            <th class="saffron-head" style="text-align:right;">Year 2</th>
+            <th class="saffron-head" style="text-align:right;">Year 3</th>
+          </tr>
+          <tr><td>Total Revenue</td><td style="text-align:right;">$890K</td><td style="text-align:right;">$1,870K</td><td style="text-align:right;">$3,200K</td></tr>
+          <tr><td>Total Expenses</td><td style="text-align:right;">$850K</td><td style="text-align:right;">$1,143K</td><td style="text-align:right;">$1,465K</td></tr>
+          <tr class="green-row"><td><strong>Net Surplus</strong></td><td style="text-align:right;"><strong>$40K</strong></td><td style="text-align:right;"><strong>$727K</strong></td><td style="text-align:right;"><strong>$1,735K</strong></td></tr>
+          <tr><td>Cumulative Surplus</td><td style="text-align:right;">$40K</td><td style="text-align:right;">$767K</td><td style="text-align:right;"><strong style="color:var(--green);">$2,502K</strong></td></tr>
+        </table>
+      </div>
+
+      <div class="col-40">
+        <div class="section-title">Revenue vs. Expense Growth</div>
+        <div class="bar-chart" style="margin-bottom:18px;">
+          <div style="font-size:0.68rem;font-weight:600;color:var(--gray);margin-bottom:6px;">Year 1</div>
+          <div class="bar-row">
+            <div class="bar-label">Revenue</div>
+            <div class="bar-track"><div class="bar-fill revenue" style="width:27.8%;"><span>$890K</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Expenses</div>
+            <div class="bar-track"><div class="bar-fill expense" style="width:26.5%;"><span>$850K</span></div></div>
+          </div>
+          <div style="font-size:0.68rem;font-weight:600;color:var(--gray);margin:8px 0 6px;">Year 2</div>
+          <div class="bar-row">
+            <div class="bar-label">Revenue</div>
+            <div class="bar-track"><div class="bar-fill revenue" style="width:58.4%;"><span>$1.87M</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Expenses</div>
+            <div class="bar-track"><div class="bar-fill expense" style="width:35.7%;"><span>$1.14M</span></div></div>
+          </div>
+          <div style="font-size:0.68rem;font-weight:600;color:var(--gray);margin:8px 0 6px;">Year 3</div>
+          <div class="bar-row">
+            <div class="bar-label">Revenue</div>
+            <div class="bar-track"><div class="bar-fill revenue" style="width:100%;"><span>$3.2M</span></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label">Expenses</div>
+            <div class="bar-track"><div class="bar-fill expense" style="width:45.7%;"><span>$1.47M</span></div></div>
+          </div>
+        </div>
+
+        <div class="callout green-callout">
+          <p>By Year 3, CHCC retains <strong>$0.54 of every $1.00 earned</strong> as surplus — a 54% net margin, far exceeding most nonprofits. This surplus repays loans, seeds the endowment, and funds Phase 2 expansion.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-box green">
+        <div class="num">Year 1</div>
+        <div class="label">Near Break-Even<br>Operations from Day 1</div>
+      </div>
+      <div class="metric-box saffron">
+        <div class="num">Year 2</div>
+        <div class="label">$727K surplus<br>Loan repayments begin</div>
+      </div>
+      <div class="metric-box teak">
+        <div class="num">Year 3</div>
+        <div class="label">$1.7M+ surplus<br>All loans repayable</div>
+      </div>
+      <div class="metric-box navy">
+        <div class="num">Year 5</div>
+        <div class="label">Loan-free<br>Endowment building</div>
+      </div>
+    </div>
+
+    <div class="page-footer" style="margin-top:14px;">
+      <span class="logo-small">CHCC · Charlotte Hindu Community Center</span>
+      <span>Charlotte, NC · 501(c)(3) · EIN Provided on Request</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     PAGE 5 — LOAN REPAYMENT PLAN
+════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="page-header">
+      <h2>Loan Repayment Plan:<br>How Every Dollar Is Returned</h2>
+      <div class="page-num">Page 5 of 7</div>
+    </div>
+
+    <div class="callout navy-callout" style="margin-bottom:18px;">
+      <p><strong>The Core Promise:</strong> Community loan donors are not making a gift — they are making a financial arrangement backed by CHCC's signed pledge agreement, projected surplus, and board accountability. Every structure is designed for full repayment within the chosen term.</p>
+    </div>
+
+    <div class="two-col" style="margin-bottom:18px;">
+      <div class="col">
+        <div class="section-title">Community Loan Structures</div>
+        <table style="margin-bottom:10px;">
+          <tr>
+            <th class="navy-head">Structure</th>
+            <th class="navy-head">Interest</th>
+            <th class="navy-head">Repayment</th>
+            <th class="navy-head">Tax Benefit</th>
+          </tr>
+          <tr>
+            <td><strong>Nishkama</strong> (निष्काम)<br><span style="font-size:0.7rem;color:var(--gray);">Interest-Free Loan</span></td>
+            <td>0%</td>
+            <td>Full principal at term end (3, 5, or 7 yr)</td>
+            <td>Forgiven portion only</td>
+          </tr>
+          <tr>
+            <td><strong>Moksha Daan</strong> (मोक्ष दान)<br><span style="font-size:0.7rem;color:var(--gray);">Graduated Forgiveness</span></td>
+            <td>0%</td>
+            <td>CHCC repays $0 — 100% forgiven in annual tranches</td>
+            <td>Full deduction spread over term</td>
+          </tr>
+          <tr>
+            <td><strong>Vriddhi</strong> (वृद्धि)<br><span style="font-size:0.7rem;color:var(--gray);">4% Deferred Interest</span></td>
+            <td>4% simple</td>
+            <td>Principal + interest balloon at term end</td>
+            <td>Convert any time to deductible donation</td>
+          </tr>
+        </table>
+
+        <div class="section-title" style="margin-top:14px;">Vriddhi Repayment Table ($50K / $100K / $150K at 4%)</div>
+        <table>
+          <tr>
+            <th class="saffron-head">Amount</th>
+            <th class="saffron-head">3-Year Return</th>
+            <th class="saffron-head">5-Year Return</th>
+            <th class="saffron-head">7-Year Return</th>
+          </tr>
+          <tr><td>$50,000</td><td>$56,000 <span style="font-size:0.7rem;color:var(--green);">(+$6K)</span></td><td>$60,000 <span style="font-size:0.7rem;color:var(--green);">(+$10K)</span></td><td>$64,000 <span style="font-size:0.7rem;color:var(--green);">(+$14K)</span></td></tr>
+          <tr><td>$100,000</td><td>$112,000 <span style="font-size:0.7rem;color:var(--green);">(+$12K)</span></td><td>$120,000 <span style="font-size:0.7rem;color:var(--green);">(+$20K)</span></td><td>$128,000 <span style="font-size:0.7rem;color:var(--green);">(+$28K)</span></td></tr>
+          <tr class="highlight"><td>$150,000</td><td>$168,000 <span style="font-size:0.7rem;color:var(--saffron-dark);">(+$18K)</span></td><td>$180,000 <span style="font-size:0.7rem;color:var(--saffron-dark);">(+$30K)</span></td><td>$192,000 <span style="font-size:0.7rem;color:var(--saffron-dark);">(+$42K)</span></td></tr>
+        </table>
+      </div>
+
+      <div class="col-40">
+        <div class="section-title">Repayment Coverage Analysis</div>
+        <div style="background:var(--ivory);border-radius:8px;padding:14px;margin-bottom:12px;">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;">Assumed Loan Scenario</div>
+          <table style="font-size:0.78rem;">
+            <tr><td style="padding:4px 6px;">Nishkama loans (0%)</td><td style="padding:4px 6px;font-weight:700;">$300,000</td></tr>
+            <tr><td style="padding:4px 6px;">Vriddhi loans (4%)</td><td style="padding:4px 6px;font-weight:700;">$500,000</td></tr>
+            <tr><td style="padding:4px 6px;">Vriddhi interest (est.)</td><td style="padding:4px 6px;font-weight:700;">$100,000</td></tr>
+            <tr style="border-top:2px solid var(--light);"><td style="padding:6px 6px;font-weight:700;">Total Obligation</td><td style="padding:6px 6px;font-weight:800;color:var(--navy);">$900,000</td></tr>
+          </table>
+        </div>
+        <div style="background:var(--turmeric);border-radius:8px;padding:14px;margin-bottom:12px;">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--saffron-dark);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:10px;">Available Surplus (Year 3)</div>
+          <div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--charcoal);line-height:1;margin-bottom:4px;">$2,502,000</div>
+          <div style="font-size:0.72rem;color:var(--gray);">Cumulative 3-year surplus</div>
+        </div>
+        <div style="background:var(--green);border-radius:8px;padding:14px;text-align:center;">
+          <div style="font-size:0.7rem;font-weight:700;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;">Coverage Ratio</div>
+          <div style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:#fff;line-height:1;">2.8×</div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.7);margin-top:4px;">Surplus covers all loan obligations<br>2.8 times over</div>
+        </div>
+
+        <div style="margin-top:12px;background:rgba(26,35,64,0.06);border-radius:6px;padding:10px 12px;">
+          <div style="font-size:0.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:5px;">Stress Test: 30% Revenue Shortfall</div>
+          <div style="font-size:0.75rem;line-height:1.5;color:var(--charcoal);">Even if Year 1–3 revenues come in 30% below projections, the cumulative surplus (~$900K) still fully covers Nishkama repayments, with Vriddhi repaid by Year 5.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-title navy-title">Board Accountability &amp; Donor Protections</div>
+    <div class="two-col">
+      <div class="col">
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+            <div style="font-size:0.78rem;line-height:1.5;">Signed pledge agreement (wet or digital signature) with CHCC board countersignature within 10 business days</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+            <div style="font-size:0.78rem;line-height:1.5;">Finance Committee reviews all expenditures over $5,000; independent CPA audit annually</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+            <div style="font-size:0.78rem;line-height:1.5;">Audited financial statements published on CHCC website within 90 days of fiscal year end</div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">4</div>
+            <div style="font-size:0.78rem;line-height:1.5;">Vriddhi donors ($100K+) receive Advisory Council seat and quarterly financial reports</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">5</div>
+            <div style="font-size:0.78rem;line-height:1.5;">Capital campaign funds held in a separate restricted account — not commingled with operations</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;">
+            <div style="width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:0.7rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">6</div>
+            <div style="font-size:0.78rem;line-height:1.5;">If Phase 1 goals not met in 36 months, restricted funds returned to donors upon request</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="logo-small">CHCC · Charlotte Hindu Community Center</span>
+      <span>Charlotte, NC · 501(c)(3) · EIN Provided on Request</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     PAGE 6 — TIMELINE & RISK
+════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="inner-page">
+    <div class="page-header">
+      <h2>Timeline to Profitability &amp; Risk Analysis</h2>
+      <div class="page-num">Page 6 of 7</div>
+    </div>
+
+    <div class="two-col" style="margin-bottom:20px;">
+      <div class="col-60">
+        <div class="section-title">Year-by-Year Milestones</div>
+        <div class="timeline">
+          <div class="timeline-item done">
+            <div class="year">2025 — Year 0</div>
+            <div class="milestone">Capital Campaign Launches</div>
+            <div class="detail">100 founding donors target; $250K in Q1; 501(c)(3) established; website &amp; pledge portal live</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2026 Q1 — Soft Open</div>
+            <div class="milestone">Interim Facility Secured (5,000–8,000 sq ft)</div>
+            <div class="detail">Aum School launches (50 students); yoga classes begin; founding member drive hits 200+ memberships</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2026 Q4 — Year 1 Full</div>
+            <div class="milestone">Near Break-Even Operations · Net: $40K surplus</div>
+            <div class="detail">Gaushala Phase 1 (10–15 cows); Sattvic kitchen opens; all 9 revenue streams active</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2027 — Year 2</div>
+            <div class="milestone">Profitability Threshold Crossed · Net: $727K surplus</div>
+            <div class="detail">150+ Aum School students; yoga membership hits 250+; Gaushala at capacity; Nishkama loan repayments begin</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2028 — Year 3</div>
+            <div class="milestone">Full Profitability · Net: $1.735M surplus</div>
+            <div class="detail">200 Aum School students; $3.2M annual revenue; all loan obligations covered 2.8×; endowment seeding begins</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2029 — Year 4</div>
+            <div class="milestone">Scale &amp; Permanent Campus</div>
+            <div class="detail">Phase 2 permanent campus site identified; endowment at $500K+; expansion of Gaushala and Heritage Arts Wing</div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2030 — Year 5</div>
+            <div class="milestone">Loan-Free · Endowment-Funded Institution</div>
+            <div class="detail">All community loans repaid; CHCC operationally independent of donations; endowment earnings fund scholarships in perpetuity</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-40">
+        <div class="section-title">Risk Assessment</div>
+        <table style="margin-bottom:14px;">
+          <tr>
+            <th class="navy-head">Risk</th>
+            <th class="navy-head">Level</th>
+          </tr>
+          <tr>
+            <td style="vertical-align:top;">
+              <div style="font-weight:600;font-size:0.78rem;margin-bottom:2px;">Aum School enrollment shortfall</div>
+              <div style="font-size:0.7rem;color:var(--gray);">40K families nearby; waitlist expected in 6 months</div>
+            </td>
+            <td><span class="risk risk-low">Low</span></td>
+          </tr>
+          <tr>
+            <td style="vertical-align:top;">
+              <div style="font-weight:600;font-size:0.78rem;margin-bottom:2px;">Wellness revenue below target</div>
+              <div style="font-size:0.7rem;color:var(--gray);">Pre-launch member drive locks in 200+ at founding rate</div>
+            </td>
+            <td><span class="risk risk-low">Low</span></td>
+          </tr>
+          <tr>
+            <td style="vertical-align:top;">
+              <div style="font-weight:600;font-size:0.78rem;margin-bottom:2px;">Facility cost overrun</div>
+              <div style="font-size:0.7rem;color:var(--gray);">$120K operating reserve in capital budget; phased build-out</div>
+            </td>
+            <td><span class="risk risk-med">Medium</span></td>
+          </tr>
+          <tr>
+            <td style="vertical-align:top;">
+              <div style="font-weight:600;font-size:0.78rem;margin-bottom:2px;">Key staff departure</div>
+              <div style="font-size:0.7rem;color:var(--gray);">Mission-driven hiring; competitive pay; 3-yr principal contracts</div>
+            </td>
+            <td><span class="risk risk-low">Low</span></td>
+          </tr>
+          <tr>
+            <td style="vertical-align:top;">
+              <div style="font-weight:600;font-size:0.78rem;margin-bottom:2px;">Economic downturn</div>
+              <div style="font-size:0.7rem;color:var(--gray);">9 diversified revenue streams; school tuition is "sticky"</div>
+            </td>
+            <td><span class="risk risk-med">Medium</span></td>
+          </tr>
+          <tr>
+            <td style="vertical-align:top;">
+              <div style="font-weight:600;font-size:0.78rem;margin-bottom:2px;">Inability to repay loans</div>
+              <div style="font-size:0.7rem;color:var(--gray);">$2.5M surplus by Yr 3 covers $900K obligation 2.8×</div>
+            </td>
+            <td><span class="risk risk-low">Very Low</span></td>
+          </tr>
+        </table>
+
+        <div class="callout green-callout">
+          <p><strong>The single biggest risk CHCC faces is NOT building this.</strong> Every year without a center, 40,000 South Charlotte Indian-Americans age out of cultural connection, children grow up without heritage education, and community wealth flows to institutions that don't serve community values.</p>
+        </div>
+
+        <div class="section-title navy-title" style="margin-top:14px;">The 5-Number Summary</div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;background:var(--ivory);border-radius:4px;padding:7px 10px;">
+            <div style="font-size:0.78rem;font-weight:600;">Capital raised (Phase 1)</div>
+            <div style="font-size:0.85rem;font-weight:800;color:var(--saffron);">$2,000,000</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:var(--ivory);border-radius:4px;padding:7px 10px;">
+            <div style="font-size:0.78rem;font-weight:600;">Addressable market (South Charlotte)</div>
+            <div style="font-size:0.85rem;font-weight:800;color:var(--saffron);">~40,000 people</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:var(--ivory);border-radius:4px;padding:7px 10px;">
+            <div style="font-size:0.78rem;font-weight:600;">Break-even year</div>
+            <div style="font-size:0.85rem;font-weight:800;color:var(--green);">Year 2 (2027)</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:var(--ivory);border-radius:4px;padding:7px 10px;">
+            <div style="font-size:0.78rem;font-weight:600;">Cumulative surplus by Year 3</div>
+            <div style="font-size:0.85rem;font-weight:800;color:var(--green);">$2,502,000</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;background:var(--turmeric);border-radius:4px;padding:7px 10px;border:1px solid var(--sandalwood);">
+            <div style="font-size:0.78rem;font-weight:700;">Loan repayment coverage</div>
+            <div style="font-size:0.85rem;font-weight:800;color:var(--teak);">2.8× surplus</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span class="logo-small">CHCC · Charlotte Hindu Community Center</span>
+      <span>Charlotte, NC · 501(c)(3) · EIN Provided on Request</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════
+     PAGE 7 — BACK COVER / CALL TO ACTION
+════════════════════════════════════════════════ -->
+<div class="page" id="back">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:6in;height:6in;border-radius:50%;border:1px solid rgba(244,124,54,0.1);pointer-events:none;"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:4.5in;height:4.5in;border-radius:50%;border:1px solid rgba(74,124,89,0.12);pointer-events:none;"></div>
+
+  <div class="back-deva">ॐ</div>
+  <h2>Be Part of Something<br><em>That Lasts Generations</em></h2>
+  <p class="back-sub">South Charlotte's 40,000 Indian-Americans have waited long enough for a home. The financial case is proven. The community is ready. The only thing missing is your commitment to make it real — and get your capital back with it.</p>
+
+  <div class="back-actions">
+    <div class="back-btn primary">Make a Community Loan</div>
+    <div class="back-btn secondary">Donate to the Campaign</div>
+  </div>
+
+  <div class="back-contact">
+    <div class="contact-item">
+      <div class="cl">Website</div>
+      <div class="cv">chcc-charlotte.org</div>
+    </div>
+    <div class="contact-item">
+      <div class="cl">Email</div>
+      <div class="cv">invest@chcc-charlotte.org</div>
+    </div>
+    <div class="contact-item">
+      <div class="cl">Phone</div>
+      <div class="cv">(704) 555-CHCC</div>
+    </div>
+    <div class="contact-item">
+      <div class="cl">Location</div>
+      <div class="cv">South Charlotte, NC</div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:16px;justify-content:center;margin-bottom:40px;flex-wrap:wrap;">
+    <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:14px 20px;text-align:center;min-width:130px;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--saffron);">$50K–$150K</div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:3px;">Community Loan Options</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:14px 20px;text-align:center;min-width:130px;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--green);">0% – 4%</div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:3px;">Interest Structures Available</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:14px 20px;text-align:center;min-width:130px;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:#fff;">3 · 5 · 7</div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:3px;">Year Terms Available</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:14px 20px;text-align:center;min-width:130px;">
+      <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--saffron);">2.8×</div>
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:3px;">Repayment Surplus Coverage</div>
+    </div>
+  </div>
+
+  <div class="back-tagline">Charlotte Hindu Community Center · 501(c)(3) Nonprofit · All donations tax-deductible · Financial statements published annually</div>
+</div>
+
+</body>
+</html>

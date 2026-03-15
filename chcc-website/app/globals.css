@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-devanagari: 'Noto Serif Devanagari', serif;
+}
+
+@layer base {
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body text-charcoal bg-cream;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-ivory;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-saffron rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-saffron-dark;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-saffron hover:bg-saffron-dark text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-warm hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:text-charcoal font-semibold px-6 py-3 rounded-full transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 border-2 border-saffron text-saffron hover:bg-saffron hover:text-white font-semibold px-6 py-3 rounded-full transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-charcoal;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-muted max-w-2xl mx-auto;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden;
+  }
+
+  .om-text {
+    @apply font-devanagari;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-saffron to-teak;
+  }
+
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+
+  .container-pad {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Decorative divider */
+  .lotus-divider {
+    @apply flex items-center justify-center my-6;
+  }
+
+  .lotus-divider::before,
+  .lotus-divider::after {
+    content: '';
+    @apply flex-1 h-px bg-light;
+  }
+
+  .lotus-divider span {
+    @apply mx-4 text-saffron text-2xl;
+  }
+
+  /* Progress bar animation */
+  .progress-bar {
+    animation: progressFill 1.5s ease-out forwards;
+  }
+
+  @keyframes progressFill {
+    from { width: 0%; }
+    to { width: var(--progress-width); }
+  }
+
+  /* Accordion */
+  .accordion-content {
+    @apply overflow-hidden transition-all duration-300;
+  }
+
+  /* Form elements */
+  .form-input {
+    @apply w-full px-4 py-3 border border-light rounded-xl bg-white text-charcoal placeholder-muted focus:outline-none focus:ring-2 focus:ring-saffron focus:border-transparent transition-all duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold text-charcoal mb-1.5;
+  }
+
+  /* Tag/Badge */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+  }
+
+  .badge-saffron {
+    @apply badge bg-turmeric text-teak;
+  }
+
+  .badge-green {
+    @apply badge bg-green/10 text-green;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  }
+
+  .bg-pattern-lotus {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30 Q35 20 40 25 Q35 35 30 30 Q25 20 20 25 Q25 35 30 30 Q40 25 45 30 Q35 35 30 30 Q40 35 45 40 Q35 35 30 30 Q25 35 20 40 Q25 35 30 30 Q20 35 15 30 Q25 25 30 30' fill='none' stroke='%23F47C36' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E");
+  }
+}
+
+/* Custom animations for counters */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mandala background pattern */
+.mandala-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.mandala-bg::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 124, 54, 0.08);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.mandala-bg::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: 1px solid rgba(244, 124, 54, 0.08);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

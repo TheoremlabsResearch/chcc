@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHCC — Lay the Foundation | Fundraising Brochure 2025</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Reset & Base ─────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --saffron:      #F47C36;
+      --saffron-dark: #D4621E;
+      --green:        #4A7C59;
+      --teak:         #8B5A2B;
+      --cream:        #FDFBF7;
+      --ivory:        #F5F0E8;
+      --turmeric:     #F9E4C8;
+      --sandalwood:   #C4956A;
+      --charcoal:     #2D2D2D;
+      --gray:         #6B7280;
+      --light:        #E5E7EB;
+      --white:        #FFFFFF;
+    }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--charcoal);
+      background: #ccc;
+    }
+
+    /* ─── Page Setup ───────────────────────────────── */
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto 0.5in;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.18);
+    }
+
+    /* ─── Typography ───────────────────────────────── */
+    .serif   { font-family: 'Playfair Display', Georgia, serif; }
+    .deva    { font-family: 'Noto Serif Devanagari', serif; }
+
+    h1 { font-family: 'Playfair Display', serif; font-weight: 900; }
+    h2 { font-family: 'Playfair Display', serif; font-weight: 700; }
+    h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+    h4 { font-family: 'Inter', sans-serif; font-weight: 600; }
+
+    /* ─── Utility ──────────────────────────────────── */
+    .text-saffron  { color: var(--saffron); }
+    .text-green    { color: var(--green); }
+    .text-teak     { color: var(--teak); }
+    .text-white    { color: var(--white); }
+    .text-gray     { color: var(--gray); }
+    .text-charcoal { color: var(--charcoal); }
+    .bg-saffron    { background: var(--saffron); }
+    .bg-green      { background: var(--green); }
+    .bg-charcoal   { background: var(--charcoal); }
+    .bg-cream      { background: var(--cream); }
+    .bg-ivory      { background: var(--ivory); }
+    .bg-turmeric   { background: var(--turmeric); }
+    .italic        { font-style: italic; }
+
+    /* ─── SVG Decorative Patterns ──────────────────── */
+    .lotus-bg {
+      position: absolute;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    /* ════════════════════════════════════════════════
+       PAGE 1 — COVER
+    ════════════════════════════════════════════════ */
+    #cover {
+      background: linear-gradient(160deg, #2D1A0E 0%, #3D2510 40%, #1A2E1F 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 11in;
+      text-align: center;
+      padding: 0.8in 0.9in;
+      position: relative;
+    }
+
+    #cover .cover-mandala {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 7in;
+      height: 7in;
+      opacity: 0.07;
+    }
+
+    #cover .nonprofit-badge {
+      background: rgba(244,124,54,0.15);
+      border: 1px solid rgba(244,124,54,0.4);
+      border-radius: 100px;
+      padding: 6px 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 40px;
+    }
+
+    #cover .cover-om {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 72px;
+      color: var(--saffron);
+      margin-bottom: 16px;
+      line-height: 1;
+      opacity: 0.9;
+    }
+
+    #cover h1 {
+      font-size: 68px;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+
+    #cover h1 em {
+      color: var(--saffron);
+      font-style: italic;
+    }
+
+    #cover .cover-tagline {
+      font-size: 18px;
+      color: rgba(255,255,255,0.72);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      margin-bottom: 52px;
+      max-width: 5.5in;
+    }
+
+    #cover .cover-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--saffron);
+      margin: 0 auto 52px;
+      border-radius: 2px;
+    }
+
+    #cover .campaign-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 12px;
+    }
+
+    #cover .campaign-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: var(--white);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    #cover .campaign-goal {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    #cover .cover-footer {
+      position: absolute;
+      bottom: 0.5in;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 0.9in;
+    }
+
+    #cover .cover-footer-left {
+      text-align: left;
+    }
+
+    #cover .cover-footer-left .org-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      color: var(--white);
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    #cover .cover-footer-left .org-city {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 2px;
+    }
+
+    #cover .cover-footer-right {
+      text-align: right;
+    }
+
+    #cover .cover-footer-right .year-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    #cover .cover-strip {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--saffron) 0%, #F9A06A 35%, var(--green) 65%, #6AAF84 100%);
+    }
+
+    /* ════════════════════════════════════════════════
+       PAGE 2 — THE OPPORTUNITY
+    ════════════════════════════════════════════════ */
+    #opportunity {
+      display: grid;
+      grid-template-columns: 3.4in 4.6in;
+      min-height: 11in;
+    }
+
+    #opportunity .opp-left {
+      background: linear-gradient(180deg, var(--charcoal) 0%, #1A2E1F 100%);
+      padding: 0.7in 0.5in;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #opportunity .opp-left .page-num {
+      font-size: 10px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    #opportunity .opp-left h2 {
+      font-size: 44px;
+      line-height: 1.1;
+      color: var(--white);
+    }
+
+    #opportunity .opp-left h2 span {
+      color: var(--saffron);
+    }
+
+    #opportunity .opp-left .opp-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    #opportunity .opp-left .stat-item .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--saffron);
+      line-height: 1;
+    }
+
+    #opportunity .opp-left .stat-item .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.65);
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    #opportunity .opp-left .opp-quote {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 20px;
+    }
+
+    #opportunity .opp-left .opp-quote p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    #opportunity .opp-right {
+      padding: 0.7in 0.55in;
+      background: var(--cream);
+    }
+
+    #opportunity .opp-right .section-eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 10px;
+    }
+
+    #opportunity .opp-right h3 {
+      font-size: 28px;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    #opportunity .opp-right p {
+      font-size: 13.5px;
+      line-height: 1.75;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    #opportunity .need-list {
+      list-style: none;
+      margin: 24px 0;
+    }
+
+    #opportunity .need-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 14px;
+      color: var(--charcoal);
+    }
+
+    #opportunity .need-list li .bullet {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--saffron);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    #opportunity .need-list li .bullet svg {
+      width: 10px;
+      height: 10px;
+      stroke: white;
+      fill: none;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    #opportunity .inspiration-box {
+      background: var(--turmeric);
+      border-left: 4px solid var(--saffron);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-top: 24px;
+    }
+
+    #opportunity .inspiration-box h4 {
+      font-size: 12px;
+      color: var(--teak);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    #opportunity .inspiration-box p {
+      font-size: 12px;
+      color: var(--charcoal);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ════════════════════════════════════════════════
+       PAGE 3 — FOUR PILLARS
+    ════════════════════════════════════════════════ */
+    #pillars {
+      min-height: 11in;
+      background: var(--ivory);
+      padding: 0.65in 0.75in;
+      position: relative;
+    }
+
+    #pillars .pillars-header {
+      text-align: center;
+      margin-bottom: 0.45in;
+    }
+
+    #pillars .pillars-header .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 10px;
+    }
+
+    #pillars .pillars-header h2 {
+      font-size: 42px;
+      color: var(--charcoal);
+      margin-bottom: 14px;
+    }
+
+    #pillars .pillars-header p {
+      font-size: 14.5px;
+      color: var(--gray);
+      max-width: 5.5in;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-bottom: 36px;
+    }
+
+    .pillar-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 32px 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card .pillar-accent {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+    }
+
+    .pillar-card.pray  .pillar-accent { background: var(--saffron); }
+    .pillar-card.learn .pillar-accent { background: var(--green); }
+    .pillar-card.gather .pillar-accent { background: var(--teak); }
+    .pillar-card.serve .pillar-accent { background: #7C3AED; }
+
+    .pillar-card .pillar-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
+
+    .pillar-card.pray  .pillar-icon { background: #FEF0E6; }
+    .pillar-card.learn .pillar-icon { background: #EAF3EE; }
+    .pillar-card.gather .pillar-icon { background: #F5EDE4; }
+    .pillar-card.serve .pillar-icon { background: #EDE9FE; }
+
+    .pillar-card .pillar-sanskrit {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 13px;
+      color: var(--gray);
+      margin-bottom: 4px;
+    }
+
+    .pillar-card h3 {
+      font-size: 22px;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+
+    .pillar-card p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+
+    .pillar-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .pillar-tag {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 100px;
+      background: var(--ivory);
+      color: var(--charcoal);
+    }
+
+    .pillars-mission-bar {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #1A2E1F 100%);
+      border-radius: 14px;
+      padding: 28px 36px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .pillars-mission-bar .om-large {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 52px;
+      color: var(--saffron);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .pillars-mission-bar .mission-text h4 {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
+    }
+
+    .pillars-mission-bar .mission-text p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 15px;
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ════════════════════════════════════════════════
+       PAGE 4 — FACILITY PLAN
+    ════════════════════════════════════════════════ */
+    #facility {
+      min-height: 11in;
+      background: var(--cream);
+      padding: 0.6in 0.7in;
+    }
+
+    #facility .facility-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.4in;
+      gap: 0.5in;
+    }
+
+    #facility .facility-header-left .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 10px;
+    }
+
+    #facility .facility-header-left h2 {
+      font-size: 40px;
+      color: var(--charcoal);
+      line-height: 1.1;
+    }
+
+    #facility .facility-header-right {
+      background: var(--turmeric);
+      border-radius: 12px;
+      padding: 20px 24px;
+      min-width: 2.2in;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    #facility .facility-header-right .acres {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--saffron);
+      line-height: 1;
+    }
+
+    #facility .facility-header-right .acres-label {
+      font-size: 11px;
+      color: var(--teak);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* Facility map visual */
+    .facility-map {
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 28px;
+      border: 2px solid var(--light);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 3px;
+      background: var(--light);
+    }
+
+    .facility-map .map-zone {
+      padding: 22px 24px;
+      position: relative;
+    }
+
+    .facility-map .map-zone .zone-label {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      opacity: 0.7;
+    }
+
+    .facility-map .map-zone h4 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .facility-map .map-zone .zone-items {
+      font-size: 11.5px;
+      line-height: 1.7;
+      opacity: 0.8;
+    }
+
+    .map-zone.outdoor   { background: #EDF7EE; color: #1A3D22; grid-column: 1 / -1; }
+    .map-zone.wing-a    { background: #FEF3E8; color: #5C2D00; }
+    .map-zone.wing-b    { background: #FDF6EE; color: #4A1F00; }
+    .map-zone.wing-c    { background: #EAF3EE; color: #1A3D22; }
+    .map-zone.wing-d    { background: #2D2D2D; color: var(--white); }
+
+    .map-zone.outdoor .zone-label { color: var(--green); }
+    .map-zone.wing-a .zone-label  { color: var(--saffron); }
+    .map-zone.wing-b .zone-label  { color: var(--teak); }
+    .map-zone.wing-c .zone-label  { color: var(--green); }
+    .map-zone.wing-d .zone-label  { color: rgba(255,255,255,0.5); }
+
+    .facility-highlights {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .facility-highlight-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 16px 14px;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+
+    .facility-highlight-card .fh-icon {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .facility-highlight-card h4 {
+      font-size: 13px;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .facility-highlight-card p {
+      font-size: 11px;
+      color: var(--gray);
+      line-height: 1.45;
+    }
+
+    /* ════════════════════════════════════════════════
+       PAGE 5 — PROGRAMS & COMMUNITY IMPACT
+    ════════════════════════════════════════════════ */
+    #programs-impact {
+      min-height: 11in;
+      background: var(--cream);
+      padding: 0.6in 0.7in;
+    }
+
+    #programs-impact .pi-header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    #programs-impact .pi-header .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 8px;
+    }
+
+    #programs-impact .pi-header h2 {
+      font-size: 38px;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+
+    #programs-impact .pi-header p {
+      font-size: 13.5px;
+      color: var(--gray);
+      max-width: 5in;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .program-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1.5px solid var(--light);
+      background: var(--white);
+    }
+
+    .program-card .pc-header {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      gap: 12px;
+    }
+
+    .program-card.aum-school .pc-header  { background: linear-gradient(135deg, #FEF0E6, #FDDFC7); }
+    .program-card.yoga .pc-header        { background: linear-gradient(135deg, #EAF3EE, #D5EAD9); }
+    .program-card.gaushala .pc-header    { background: linear-gradient(135deg, #F5EDE4, #EDD9C5); }
+    .program-card.arts .pc-header        { background: linear-gradient(135deg, #EDE9FE, #D9D3F8); }
+    .program-card.seniors .pc-header     { background: linear-gradient(135deg, #FEF0E6, #FCE2D0); }
+    .program-card.sewa .pc-header        { background: linear-gradient(135deg, #EAF3EE, #C8DFD0); }
+
+    .program-card .pc-header .pc-icon {
+      font-size: 28px;
+    }
+
+    .program-card .pc-header h4 {
+      font-size: 14px;
+      color: var(--charcoal);
+    }
+
+    .program-card .pc-body {
+      padding: 14px 18px 18px;
+    }
+
+    .program-card .pc-body p {
+      font-size: 11.5px;
+      line-height: 1.65;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+
+    .program-card .pc-body .pc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .pc-tag {
+      font-size: 10px;
+      font-weight: 500;
+      padding: 3px 8px;
+      border-radius: 100px;
+      background: var(--ivory);
+      color: var(--charcoal);
+    }
+
+    /* Impact strip */
+    .impact-strip {
+      background: linear-gradient(135deg, var(--charcoal) 0%, #1A2E1F 100%);
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-bottom: 28px;
+    }
+
+    .impact-strip h3 {
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .impact-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .impact-metric {
+      text-align: center;
+      position: relative;
+    }
+
+    .impact-metric + .impact-metric::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .impact-metric .metric-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--saffron);
+      line-height: 1;
+    }
+
+    .impact-metric .metric-plus {
+      font-size: 24px;
+      color: var(--saffron);
+    }
+
+    .impact-metric .metric-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* Testimonial */
+    .testimonial-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .testimonial-card {
+      background: var(--turmeric);
+      border-radius: 10px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--saffron);
+    }
+
+    .testimonial-card .quote-mark {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      color: var(--saffron);
+      line-height: 0.8;
+      margin-bottom: 8px;
+      opacity: 0.6;
+    }
+
+    .testimonial-card p {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--charcoal);
+      line-height: 1.65;
+      margin-bottom: 12px;
+    }
+
+    .testimonial-card .attribution {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--teak);
+    }
+
+    .testimonial-card .attribution span {
+      font-weight: 400;
+      color: var(--gray);
+    }
+
+    /* ════════════════════════════════════════════════
+       PAGE 6 — DONATION TIERS + PLEDGE
+    ════════════════════════════════════════════════ */
+    #donate {
+      min-height: 11in;
+      background: var(--cream);
+      padding: 0.6in 0.7in;
+    }
+
+    #donate .donate-header {
+      text-align: center;
+      margin-bottom: 0.35in;
+    }
+
+    #donate .donate-header .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 8px;
+    }
+
+    #donate .donate-header h2 {
+      font-size: 40px;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+    }
+
+    #donate .donate-header p {
+      font-size: 13.5px;
+      color: var(--gray);
+      max-width: 5.2in;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    .track-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .track-label .tl-badge {
+      background: var(--saffron);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+    }
+
+    .track-label h3 {
+      font-size: 20px;
+      color: var(--charcoal);
+    }
+
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .tier-card {
+      border-radius: 12px;
+      border: 1.5px solid var(--light);
+      background: var(--white);
+      padding: 18px 14px;
+      text-align: center;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tier-card .tier-top-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--saffron);
+    }
+
+    .tier-card .tier-name {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 6px;
+    }
+
+    .tier-card .tier-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--saffron);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    .tier-card .tier-desc {
+      font-size: 10.5px;
+      color: var(--gray);
+      line-height: 1.5;
+    }
+
+    .tier-card.featured {
+      background: var(--saffron);
+      border-color: var(--saffron);
+    }
+
+    .tier-card.featured .tier-name { color: rgba(255,255,255,0.7); }
+    .tier-card.featured .tier-amount { color: var(--white); font-size: 30px; }
+    .tier-card.featured .tier-desc { color: rgba(255,255,255,0.8); }
+    .tier-card.featured .tier-top-bar { background: rgba(255,255,255,0.4); }
+
+    /* Pledge section */
+    .pledge-section {
+      background: linear-gradient(135deg, #1A2E1F 0%, var(--charcoal) 100%);
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-bottom: 28px;
+    }
+
+    .pledge-section .pledge-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .pledge-section .pledge-header-left .eyebrow {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 8px;
+    }
+
+    .pledge-section .pledge-header-left h3 {
+      font-size: 24px;
+      color: var(--white);
+    }
+
+    .pledge-section .pledge-header-right {
+      text-align: right;
+    }
+
+    .pledge-section .pledge-header-right .pledge-amounts {
+      display: flex;
+      gap: 10px;
+    }
+
+    .pledge-amount-badge {
+      background: rgba(244,124,54,0.2);
+      border: 1px solid rgba(244,124,54,0.4);
+      border-radius: 8px;
+      padding: 8px 14px;
+      text-align: center;
+    }
+
+    .pledge-amount-badge .pa-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--saffron);
+    }
+
+    .pledge-amount-badge .pa-label {
+      font-size: 9px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .pledge-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .pledge-option {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 18px 16px;
+    }
+
+    .pledge-option .po-number {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 8px;
+    }
+
+    .pledge-option h4 {
+      font-size: 14px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .pledge-option p {
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+
+    .pledge-option .po-highlight {
+      margin-top: 10px;
+      background: rgba(244,124,54,0.15);
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 10.5px;
+      color: var(--saffron);
+      font-weight: 500;
+    }
+
+    /* Budget bar */
+    .budget-breakdown {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 22px 26px;
+      border: 1.5px solid var(--light);
+    }
+
+    .budget-breakdown h4 {
+      font-size: 13px;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    .budget-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .budget-row:last-child { margin-bottom: 0; }
+
+    .budget-row .br-label {
+      font-size: 11px;
+      color: var(--charcoal);
+      min-width: 2.2in;
+    }
+
+    .budget-row .br-bar-wrap {
+      flex: 1;
+      background: var(--ivory);
+      border-radius: 100px;
+      height: 8px;
+      overflow: hidden;
+    }
+
+    .budget-row .br-bar {
+      height: 100%;
+      border-radius: 100px;
+      background: var(--saffron);
+    }
+
+    .budget-row .br-amount {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--charcoal);
+      min-width: 0.7in;
+      text-align: right;
+    }
+
+    /* ════════════════════════════════════════════════
+       PAGE 7 — BACK COVER / CTA
+    ════════════════════════════════════════════════ */
+    #backcover {
+      min-height: 11in;
+      background: linear-gradient(160deg, #1A0A00 0%, #2D1A0E 35%, #1A2E1F 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8in 0.9in;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    #backcover .bc-top-strip {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--saffron), #F9A06A, var(--green), #6AAF84);
+    }
+
+    #backcover .bc-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--saffron);
+      margin-bottom: 16px;
+    }
+
+    #backcover h2 {
+      font-size: 52px;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      max-width: 6.5in;
+    }
+
+    #backcover h2 em {
+      color: var(--saffron);
+      font-style: italic;
+    }
+
+    #backcover .bc-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.65);
+      max-width: 5.2in;
+      line-height: 1.7;
+      margin-bottom: 56px;
+      font-weight: 300;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 64px;
+      justify-content: center;
+    }
+
+    .cta-btn {
+      padding: 16px 36px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    .cta-btn.primary {
+      background: var(--saffron);
+      color: var(--white);
+    }
+
+    .cta-btn.outline {
+      border: 2px solid rgba(255,255,255,0.3);
+      color: var(--white);
+      background: transparent;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      width: 100%;
+      max-width: 6in;
+      margin-bottom: 60px;
+    }
+
+    .contact-item {
+      text-align: center;
+    }
+
+    .contact-item .ci-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 6px;
+    }
+
+    .contact-item .ci-value {
+      font-size: 13px;
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .contact-item .ci-value a {
+      color: var(--saffron);
+      text-decoration: none;
+    }
+
+    .bc-divider {
+      width: 100%;
+      max-width: 5in;
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      margin-bottom: 36px;
+    }
+
+    .bc-legal {
+      font-size: 10px;
+      color: rgba(255,255,255,0.28);
+      line-height: 1.7;
+      max-width: 5.5in;
+    }
+
+    #backcover .bc-logo-area {
+      margin-bottom: 48px;
+    }
+
+    #backcover .bc-logo-om {
+      font-family: 'Noto Serif Devanagari', serif;
+      font-size: 56px;
+      color: var(--saffron);
+      opacity: 0.5;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    #backcover .bc-logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: var(--white);
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    #backcover .bc-logo-tagline {
+      font-size: 11px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ─── Print Styles ─────────────────────────────── */
+    @media print {
+      body {
+        background: none;
+        margin: 0;
+      }
+
+      .page {
+        margin: 0;
+        box-shadow: none;
+        page-break-after: always;
+        page-break-inside: avoid;
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      @page {
+        size: letter portrait;
+        margin: 0;
+      }
+    }
+
+    /* ─── Screen helpers ───────────────────────────── */
+    @media screen {
+      body {
+        padding: 0.4in 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 1 — COVER
+  ══════════════════════════════════════════════ -->
+  <div class="page" id="cover">
+
+    <!-- Decorative mandala background -->
+    <svg class="cover-mandala" viewBox="0 0 400 400" fill="none">
+      <circle cx="200" cy="200" r="180" stroke="white" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="150" stroke="white" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="120" stroke="white" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="90" stroke="white" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="60" stroke="white" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="30" stroke="white" stroke-width="0.5"/>
+      <line x1="200" y1="20" x2="200" y2="380" stroke="white" stroke-width="0.5"/>
+      <line x1="20" y1="200" x2="380" y2="200" stroke="white" stroke-width="0.5"/>
+      <line x1="73" y1="73" x2="327" y2="327" stroke="white" stroke-width="0.5"/>
+      <line x1="327" y1="73" x2="73" y2="327" stroke="white" stroke-width="0.5"/>
+      <line x1="200" y1="20" x2="380" y2="200" stroke="white" stroke-width="0.3"/>
+      <line x1="380" y1="200" x2="200" y2="380" stroke="white" stroke-width="0.3"/>
+      <line x1="200" y1="380" x2="20" y2="200" stroke="white" stroke-width="0.3"/>
+      <line x1="20" y1="200" x2="200" y2="20" stroke="white" stroke-width="0.3"/>
+      <!-- Lotus petals -->
+      <ellipse cx="200" cy="140" rx="18" ry="35" fill="white" fill-opacity="0.04"/>
+      <ellipse cx="200" cy="260" rx="18" ry="35" fill="white" fill-opacity="0.04"/>
+      <ellipse cx="140" cy="200" rx="35" ry="18" fill="white" fill-opacity="0.04"/>
+      <ellipse cx="260" cy="200" rx="35" ry="18" fill="white" fill-opacity="0.04"/>
+      <ellipse cx="149" cy="149" rx="18" ry="35" transform="rotate(-45 149 149)" fill="white" fill-opacity="0.03"/>
+      <ellipse cx="251" cy="149" rx="18" ry="35" transform="rotate(45 251 149)" fill="white" fill-opacity="0.03"/>
+      <ellipse cx="251" cy="251" rx="18" ry="35" transform="rotate(-45 251 251)" fill="white" fill-opacity="0.03"/>
+      <ellipse cx="149" cy="251" rx="18" ry="35" transform="rotate(45 149 251)" fill="white" fill-opacity="0.03"/>
+    </svg>
+
+    <div class="nonprofit-badge">501(c)(3) Nonprofit · Charlotte, NC</div>
+
+    <div class="cover-om">ॐ</div>
+
+    <h1>Charlotte<br><em>Hindu</em><br>Community<br>Center</h1>
+
+    <p class="cover-tagline">Holistic Heritage &nbsp;·&nbsp; Wellness &nbsp;·&nbsp; Harmony</p>
+
+    <div class="cover-divider"></div>
+
+    <div class="campaign-label">Fundraising Appeal · 2025–2028</div>
+    <div class="campaign-title">"Lay the Foundation"</div>
+    <div class="campaign-goal">$2,000,000 Capital Campaign &nbsp;·&nbsp; 5-Acre Community Campus</div>
+
+    <div class="cover-footer">
+      <div class="cover-footer-left">
+        <div class="org-name">Charlotte Hindu Community Center</div>
+        <div class="org-city">Charlotte, North Carolina</div>
+      </div>
+      <div class="cover-footer-right">
+        <div class="year-label">chcc.org &nbsp;·&nbsp; info@chcc.org</div>
+      </div>
+    </div>
+
+    <div class="cover-strip"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 2 — THE OPPORTUNITY
+  ══════════════════════════════════════════════ -->
+  <div class="page" id="opportunity">
+
+    <div class="opp-left">
+      <div class="page-num">02 / 07 &nbsp;·&nbsp; The Opportunity</div>
+
+      <h2>A Community<br>Without a<br><span>Home.</span></h2>
+
+      <div class="opp-stats">
+        <div class="stat-item">
+          <div class="stat-num">80,000<span style="font-size:28px">+</span></div>
+          <div class="stat-label">Indian-Americans in the<br>Greater Charlotte metro area</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">0</div>
+          <div class="stat-label">Dedicated Hindu community<br>centers in the Carolinas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3rd</div>
+          <div class="stat-label">Fastest-growing large city<br>in the United States</div>
+        </div>
+      </div>
+
+      <div class="opp-quote">
+        <p>"A community that does not preserve its roots cannot sustain its branches."</p>
+      </div>
+    </div>
+
+    <div class="opp-right">
+      <div class="section-eyebrow">Why CHCC · Why Now</div>
+      <h3>Charlotte's Indian-American<br>community is thriving —<br>and underserved.</h3>
+
+      <p>Over 80,000 Indian-Americans call Greater Charlotte home. Engineers, physicians, educators, entrepreneurs, and their families have built careers and raised children here. Yet this vibrant community gathers in rented church halls, hotel ballrooms, and private backyards — spaces that cannot preserve culture, educate children, or forge the intergenerational bonds that keep Dharmic values alive.</p>
+
+      <p>The Charlotte Hindu Community Center changes that. It is not just a building — it is an investment in identity, belonging, and the next generation.</p>
+
+      <ul class="need-list">
+        <li>
+          <div class="bullet">
+            <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          </div>
+          <span><strong>Cultural Loss:</strong> Second-generation children growing up without language, heritage arts, or philosophical grounding.</span>
+        </li>
+        <li>
+          <div class="bullet">
+            <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          </div>
+          <span><strong>Wellness Gap:</strong> Authentic Ayurvedic, Kalaripayattu, and traditional yoga offerings are nonexistent in the Charlotte market.</span>
+        </li>
+        <li>
+          <div class="bullet">
+            <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          </div>
+          <span><strong>Senior Isolation:</strong> First-generation elders lack dedicated spaces for social connection, language-comfortable support, and cultural continuity.</span>
+        </li>
+        <li>
+          <div class="bullet">
+            <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+          </div>
+          <span><strong>Civic Voice:</strong> The Indian-American community lacks a unified anchor institution for civic leadership and community philanthropy.</span>
+        </li>
+      </ul>
+
+      <div class="inspiration-box">
+        <h4>✦ &nbsp; Proven Models We Are Built Upon</h4>
+        <p><strong>Keshavam (Washington D.C.)</strong> — Community first, building second. Their grassroots model raised $3M before breaking ground. &nbsp;·&nbsp; <strong>S3 Gaushala (Memphis)</strong> — America's premier urban desi cow sanctuary and a model for CHCC's Gaushala. &nbsp;·&nbsp; <strong>Jewish Community Centers</strong> — The gold standard for multi-generational, multi-faith civic institutions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 3 — FOUR PILLARS
+  ══════════════════════════════════════════════ -->
+  <div class="page" id="pillars">
+
+    <div class="pillars-header">
+      <div class="eyebrow">Our Foundation</div>
+      <h2>Something for Everyone —<br>Built on Four Pillars</h2>
+      <p>CHCC is designed around four timeless Dharmic values that give every member of our community — from toddlers to seniors — a meaningful way to participate, grow, and serve.</p>
+    </div>
+
+    <div class="pillars-grid">
+
+      <div class="pillar-card pray">
+        <div class="pillar-accent"></div>
+        <div class="pillar-icon">🕉️</div>
+        <div class="pillar-sanskrit">ध्यान &amp; स्वास्थ्य</div>
+        <h3>Pray &amp; Wellness</h3>
+        <p>Authentic Hatha Yoga, Pranayama, Ayurvedic treatments, and contemplative meditation — not commodified fitness, but genuine transformation rooted in India's 5,000-year healing tradition.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Hatha Yoga</span>
+          <span class="pillar-tag">Ayurveda</span>
+          <span class="pillar-tag">Pranayama</span>
+          <span class="pillar-tag">Vedic Chanting</span>
+          <span class="pillar-tag">Mandir Puja</span>
+        </div>
+      </div>
+
+      <div class="pillar-card learn">
+        <div class="pillar-accent"></div>
+        <div class="pillar-icon">📚</div>
+        <div class="pillar-sanskrit">विद्या</div>
+        <h3>Learn</h3>
+        <p>The Aum School blends STEM excellence with Sanskrit, Vedic Math, and Yoga. The Pathashala preserves 7 Indian languages. Heritage arts academies keep classical dance, music, and martial arts alive for the next generation.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Aum School (PreK–5)</span>
+          <span class="pillar-tag">Pathashala</span>
+          <span class="pillar-tag">Bharatanatyam</span>
+          <span class="pillar-tag">Vedic Math</span>
+          <span class="pillar-tag">Sanskrit</span>
+        </div>
+      </div>
+
+      <div class="pillar-card gather">
+        <div class="pillar-accent"></div>
+        <div class="pillar-icon">🤝</div>
+        <div class="pillar-sanskrit">संघ</div>
+        <h3>Gather</h3>
+        <p>Monthly potlucks, game nights, festival celebrations, and networking events that build genuine intergenerational bonds — creating the community we all moved to Charlotte hoping to find.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Festivals</span>
+          <span class="pillar-tag">Networking Potlucks</span>
+          <span class="pillar-tag">Game Nights</span>
+          <span class="pillar-tag">Senior Socials</span>
+          <span class="pillar-tag">Youth Events</span>
+        </div>
+      </div>
+
+      <div class="pillar-card serve">
+        <div class="pillar-accent"></div>
+        <div class="pillar-icon">🙏</div>
+        <div class="pillar-sanskrit">सेवा</div>
+        <h3>Serve (Sewa)</h3>
+        <p>Selfless service is the heart of Dharmic life. CHCC's Sewa initiatives — food drives, street cleanups, disaster relief, senior outreach — root the Indian-American community in Charlotte's broader civic life.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Food Drives</span>
+          <span class="pillar-tag">Street Cleanup</span>
+          <span class="pillar-tag">Disaster Relief</span>
+          <span class="pillar-tag">Senior Outreach</span>
+          <span class="pillar-tag">School Supplies</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pillars-mission-bar">
+      <div class="om-large">ॐ</div>
+      <div class="mission-text">
+        <h4>Mission Statement</h4>
+        <p>"To create a welcoming, inclusive sanctuary rooted in Dharmic values where every member of the Charlotte community — regardless of faith, background, or age — can learn, heal, gather, and serve."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 4 — FACILITY PLAN
+  ══════════════════════════════════════════════ -->
+  <div class="page" id="facility">
+
+    <div class="facility-header">
+      <div class="facility-header-left">
+        <div class="eyebrow">The 5-Acre Campus</div>
+        <h2>A Purpose-Built Home<br>for Every Generation</h2>
+      </div>
+      <div class="facility-header-right">
+        <div class="acres">5</div>
+        <div class="acres-label">Acres of Purpose</div>
+      </div>
+    </div>
+
+    <div class="facility-map">
+
+      <div class="map-zone outdoor">
+        <div class="zone-label">🌿 &nbsp; Outdoor Spaces · 2.5 Acres</div>
+        <h4>Gaushala · Community Garden · Recreation Fields · Walking Meditation Path</h4>
+        <div class="zone-items">
+          First desi cow sanctuary in the Carolinas &nbsp;·&nbsp; Medicinal herb garden (Tulsi, Neem, Ashwagandha) &nbsp;·&nbsp; Youth sports &amp; summer camp fields &nbsp;·&nbsp; Outdoor yoga pavilion (300 capacity) &nbsp;·&nbsp; 0.5-mile Sanskrit shloka stone path
+        </div>
+      </div>
+
+      <div class="map-zone wing-a">
+        <div class="zone-label">🏫 &nbsp; Wing A — Cultural &amp; Education</div>
+        <h4>Aum School · Pathashala · Library &amp; Museum</h4>
+        <div class="zone-items">
+          PreK–Grade 5 (200 students) &nbsp;·&nbsp; STEM + Vedic Math + Sanskrit &nbsp;·&nbsp; 7 Indian languages &nbsp;·&nbsp; Living museum &amp; digital archive
+        </div>
+      </div>
+
+      <div class="map-zone wing-b">
+        <div class="zone-label">🥋 &nbsp; Wing B — Wellness &amp; Heritage Arts</div>
+        <h4>Kalari · Mallakhamba · Dance Studios · Yoga · Ayurveda</h4>
+        <div class="zone-items">
+          Traditional red laterite Kalaripayattu arena &nbsp;·&nbsp; 30-ft teak Mallakhamba poles &nbsp;·&nbsp; 2 dance studios (sprung hardwood) &nbsp;·&nbsp; 3 yoga studios &nbsp;·&nbsp; 6 Ayurvedic treatment rooms
+        </div>
+      </div>
+
+      <div class="map-zone wing-c">
+        <div class="zone-label">🌿 &nbsp; Wing C — Culinary &amp; Retail</div>
+        <h4>Zero-Waste Juice Bar · Sattvic Food Court · Vedic Store</h4>
+        <div class="zone-items">
+          Bicycle-powered Ayurvedic juice bar &nbsp;·&nbsp; Sattvic restaurant (no onion/garlic) &nbsp;·&nbsp; Herbal supplements, books &amp; fair-trade goods &nbsp;·&nbsp; Community kitchen nights
+        </div>
+      </div>
+
+      <div class="map-zone wing-d">
+        <div class="zone-label">🕍 &nbsp; Wing D — Community &amp; Sewa</div>
+        <h4>Auditorium / Mandir · Sewa Center · Nonprofit Hub</h4>
+        <div class="zone-items">
+          1,000-seat auditorium for festivals &amp; puja &nbsp;·&nbsp; All Dharmic traditions welcome &nbsp;·&nbsp; Sewa coordination hub &nbsp;·&nbsp; Free office space for emerging nonprofits
+        </div>
+      </div>
+
+    </div>
+
+    <div class="facility-highlights">
+      <div class="facility-highlight-card">
+        <div class="fh-icon">🐄</div>
+        <h4>Gaushala</h4>
+        <p>First urban desi cow sanctuary in the Carolinas. 200+ cows at full build-out.</p>
+      </div>
+      <div class="facility-highlight-card">
+        <div class="fh-icon">🧘</div>
+        <h4>Wellness Wing</h4>
+        <p>3 yoga studios, Ayurvedic suite, meditation hall — authentic, non-commercialized.</p>
+      </div>
+      <div class="facility-highlight-card">
+        <div class="fh-icon">💃</div>
+        <h4>Arts Academies</h4>
+        <p>Bharatanatyam, Kalaripayattu, Mallakhamba, Tabla — one of a kind in the Carolinas.</p>
+      </div>
+      <div class="facility-highlight-card">
+        <div class="fh-icon">🏫</div>
+        <h4>Aum School</h4>
+        <p>Licensed PreK–5 school with $1.6M projected annual tuition by Year 3.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 5 — PROGRAMS & COMMUNITY IN ACTION
+  ══════════════════════════════════════════════ -->
+  <div class="page" id="programs-impact">
+
+    <div class="pi-header">
+      <div class="eyebrow">Programs · Community Impact</div>
+      <h2>The Community Is Already Here.</h2>
+      <p>Inspired by the Keshavam Center (D.C.), CHCC has been building community <em>before</em> the building exists. Here's the proof.</p>
+    </div>
+
+    <div class="programs-grid">
+
+      <div class="program-card aum-school">
+        <div class="pc-header">
+          <span class="pc-icon">🏫</span>
+          <h4>Aum School (PreK–5)</h4>
+        </div>
+        <div class="pc-body">
+          <p>STEM + Vedic Math + Sanskrit + Daily Yoga. Currently 35 children enrolled in pop-up Pathashala; waitlist of 40+ families for the full school.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">Ages 3–11</span>
+            <span class="pc-tag">Mon–Fri</span>
+            <span class="pc-tag">200-student capacity</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-card yoga">
+        <div class="pc-header">
+          <span class="pc-icon">🧘</span>
+          <h4>Yoga &amp; Wellness</h4>
+        </div>
+        <div class="pc-body">
+          <p>Weekly park yoga (52 sessions/year), online meditation (150+ registered), 200-hr Yoga Teacher Training, Ayurvedic treatments.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">All ages</span>
+            <span class="pc-tag">RYT-200 cert</span>
+            <span class="pc-tag">Ayurveda</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-card gaushala">
+        <div class="pc-header">
+          <span class="pc-icon">🐄</span>
+          <h4>Gaushala Programs</h4>
+        </div>
+        <div class="pc-body">
+          <p>2498 Challenge · Nourish to Flourish · My Cow My Support monthly subscription. Meet &amp; Feed weekend experiences for families and schools.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">$21–$108/month</span>
+            <span class="pc-tag">Family-friendly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-card arts">
+        <div class="pc-header">
+          <span class="pc-icon">💃</span>
+          <h4>Heritage Arts</h4>
+        </div>
+        <div class="pc-body">
+          <p>Bharatanatyam, Kathak, Kalaripayattu, Mallakhamba, Tabla, Sitar, Carnatic vocal — academies, certifications, and annual festivals.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">Age 5+</span>
+            <span class="pc-tag">Beginner–Advanced</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-card seniors">
+        <div class="pc-header">
+          <span class="pc-icon">🌸</span>
+          <h4>Senior Oasis</h4>
+        </div>
+        <div class="pc-body">
+          <p>Vedanta study circles, gentle yoga, intergenerational mentorship (Discover Our Roots), art therapy, and weekly Senior Social Fridays.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">60+</span>
+            <span class="pc-tag">Mon/Wed/Fri 4 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="program-card sewa">
+        <div class="pc-header">
+          <span class="pc-icon">🙏</span>
+          <h4>Sewa Initiatives</h4>
+        </div>
+        <div class="pc-body">
+          <p>Sewa Diwali food drive (3,200 lbs in 2024), adopted street cleanup, $18,500 raised for Hurricane Helene relief, 250 school backpacks delivered.</p>
+          <div class="pc-tags">
+            <span class="pc-tag">85 active volunteers</span>
+            <span class="pc-tag">Year-round</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="impact-strip">
+      <h3>127+ Events · 12 Months · Our Impact So Far</h3>
+      <div class="impact-metrics">
+        <div class="impact-metric">
+          <div class="metric-num">127<span class="metric-plus">+</span></div>
+          <div class="metric-label">Community<br>Events Hosted</div>
+        </div>
+        <div class="impact-metric">
+          <div class="metric-num">8,400<span class="metric-plus">+</span></div>
+          <div class="metric-label">Total Event<br>Attendees</div>
+        </div>
+        <div class="impact-metric">
+          <div class="metric-num">1,200<span class="metric-plus">+</span></div>
+          <div class="metric-label">Sewa Hours<br>Volunteered</div>
+        </div>
+        <div class="impact-metric">
+          <div class="metric-num">3,200</div>
+          <div class="metric-label">lbs of Food<br>Donated</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-row">
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p>CHCC gave my mother — who speaks almost no English — a community where she is understood and celebrated. She hasn't been this happy since we moved from Hyderabad.</p>
+        <div class="attribution">Dr. Suresh Rao <span>· Cardiologist, Matthews, NC</span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <p>When Hurricane Helene devastated Western NC, CHCC mobilized faster than any organization I've seen. These are the neighbors Charlotte needs.</p>
+        <div class="attribution">Rev. James McClendon <span>· Charlotte Interfaith Council</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 6 — HOW TO GIVE
+  ══════════════════════════════════════════════ -->
+  <div class="page" id="donate">
+
+    <div class="donate-header">
+      <div class="eyebrow">How to Give · 2025–2028 Campaign</div>
+      <h2>Invest in Charlotte's Future</h2>
+      <p>Every gift — of any size — builds the home that Charlotte's Hindu community deserves. Choose the option that works for you.</p>
+    </div>
+
+    <div class="track-label">
+      <div class="tl-badge">Track A</div>
+      <h3>"Grow Together" — Direct Donation Tiers</h3>
+    </div>
+
+    <div class="tiers-grid">
+      <div class="tier-card">
+        <div class="tier-top-bar"></div>
+        <div class="tier-name">Seed</div>
+        <div class="tier-amount">$501</div>
+        <div class="tier-desc">One month of curriculum materials for Aum School</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-top-bar"></div>
+        <div class="tier-name">Aqua</div>
+        <div class="tier-amount">$1,001</div>
+        <div class="tier-desc">Water &amp; feed for the Gaushala for one month</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-top-bar"></div>
+        <div class="tier-name">Sunlight</div>
+        <div class="tier-amount">$2,501</div>
+        <div class="tier-desc">One month of a yoga instructor's salary</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-top-bar"></div>
+        <div class="tier-name">Sprout</div>
+        <div class="tier-amount">$5,001</div>
+        <div class="tier-desc">Full equipment for one dance studio</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-top-bar"></div>
+        <div class="tier-name">Grow</div>
+        <div class="tier-amount">$10,001</div>
+        <div class="tier-desc">One semester of Aum School scholarships for 5 students</div>
+      </div>
+      <div class="tier-card">
+        <div class="tier-top-bar"></div>
+        <div class="tier-name">Nurture</div>
+        <div class="tier-amount">$25,001</div>
+        <div class="tier-desc">Full fit-out of one Ayurvedic treatment room — named in your honor</div>
+      </div>
+      <div class="tier-card featured">
+        <div class="tier-top-bar"></div>
+        <div class="tier-name">Cultivate</div>
+        <div class="tier-amount">$50,001</div>
+        <div class="tier-desc">Full Mallakhamba or Kalari arena — wing section named in your honor</div>
+      </div>
+      <div class="tier-card featured" style="background: linear-gradient(135deg, #D4621E, #F47C36);">
+        <div class="tier-top-bar"></div>
+        <div class="tier-name">Endure</div>
+        <div class="tier-amount">$100,001+</div>
+        <div class="tier-desc">Major facility space named in perpetuity for your family</div>
+      </div>
+    </div>
+
+    <div class="pledge-section">
+      <div class="pledge-header">
+        <div class="pledge-header-left">
+          <div class="eyebrow">Track B · For Visionary Donors</div>
+          <h3>The Community Pledge Program</h3>
+        </div>
+        <div class="pledge-header-right">
+          <div class="pledge-amounts">
+            <div class="pledge-amount-badge">
+              <div class="pa-amount">$25K</div>
+              <div class="pa-label">Minimum</div>
+            </div>
+            <div class="pledge-amount-badge">
+              <div class="pa-amount">$50K</div>
+              <div class="pa-label">Mid</div>
+            </div>
+            <div class="pledge-amount-badge">
+              <div class="pa-amount">$100K+</div>
+              <div class="pa-label">Lead</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pledge-options">
+        <div class="pledge-option">
+          <div class="po-number">Option 1</div>
+          <h4>Interest-Free Loan</h4>
+          <p>Lend CHCC your chosen amount at 0% interest. Full repayment within 3 years of facility identification. Your capital comes back — your community keeps the gift.</p>
+          <div class="po-highlight">Capital returned in full after 3 years</div>
+        </div>
+        <div class="pledge-option">
+          <div class="po-number">Option 2 · Most Popular</div>
+          <h4>Forgiveness Loan</h4>
+          <p>0% interest loan where 10% of principal is forgiven (and tax-deductible) each year for 3 years. On a $100K pledge: $30,000 in deductions, $70,000 repaid.</p>
+          <div class="po-highlight">$30,000 tax deduction on a $100K pledge</div>
+        </div>
+        <div class="pledge-option">
+          <div class="po-number">Option 3</div>
+          <h4>Deferred Interest Loan</h4>
+          <p>3% annual interest with all payments deferred to the end of the 3-year term. Earn a modest return while investing in your community's permanent home.</p>
+          <div class="po-highlight">Earn 3% · No payments during 3 years</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="budget-breakdown">
+      <h4>📊 &nbsp; Where Your $2,000,000 Goes — Use of Funds</h4>
+      <div class="budget-row">
+        <span class="br-label">Facility Lease (3 years)</span>
+        <div class="br-bar-wrap"><div class="br-bar" style="width:36%; background: var(--saffron);"></div></div>
+        <span class="br-amount">$720,000</span>
+      </div>
+      <div class="budget-row">
+        <span class="br-label">Aum School Setup</span>
+        <div class="br-bar-wrap"><div class="br-bar" style="width:17.5%; background: var(--green);"></div></div>
+        <span class="br-amount">$350,000</span>
+      </div>
+      <div class="budget-row">
+        <span class="br-label">Gaushala Infrastructure</span>
+        <div class="br-bar-wrap"><div class="br-bar" style="width:10%; background: var(--teak);"></div></div>
+        <span class="br-amount">$200,000</span>
+      </div>
+      <div class="budget-row">
+        <span class="br-label">Wellness Wing Build-Out</span>
+        <div class="br-bar-wrap"><div class="br-bar" style="width:7.5%; background: var(--sandalwood);"></div></div>
+        <span class="br-amount">$150,000</span>
+      </div>
+      <div class="budget-row">
+        <span class="br-label">Arts, Culinary &amp; Operations</span>
+        <div class="br-bar-wrap"><div class="br-bar" style="width:29%; background: var(--gray);"></div></div>
+        <span class="br-amount">$580,000</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       PAGE 7 — BACK COVER / CTA
+  ══════════════════════════════════════════════ -->
+  <div class="page" id="backcover">
+    <div class="bc-top-strip"></div>
+
+    <!-- Decorative circle -->
+    <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.04;width:6.5in;height:6.5in;" viewBox="0 0 400 400" fill="none">
+      <circle cx="200" cy="200" r="190" stroke="white" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="155" stroke="white" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="120" stroke="white" stroke-width="0.5"/>
+      <circle cx="200" cy="200" r="85" stroke="white" stroke-width="0.5"/>
+      <line x1="200" y1="10" x2="200" y2="390" stroke="white" stroke-width="0.4"/>
+      <line x1="10" y1="200" x2="390" y2="200" stroke="white" stroke-width="0.4"/>
+      <line x1="66" y1="66" x2="334" y2="334" stroke="white" stroke-width="0.4"/>
+      <line x1="334" y1="66" x2="66" y2="334" stroke="white" stroke-width="0.4"/>
+    </svg>
+
+    <div class="bc-logo-area">
+      <div class="bc-logo-om">ॐ</div>
+      <div class="bc-logo-name">Charlotte Hindu Community Center</div>
+      <div class="bc-logo-tagline">Holistic Heritage &nbsp;·&nbsp; Wellness &nbsp;·&nbsp; Harmony</div>
+    </div>
+
+    <div class="bc-eyebrow">Join Us · Be the Foundation</div>
+
+    <h2>Help Us Build the<br><em>Home</em> Our Community<br>Deserves.</h2>
+
+    <p class="bc-sub">Charlotte's Indian-American community is vibrant, accomplished, and ready to build something lasting. All it takes is a home — and the generosity of people like you to make it real.</p>
+
+    <div class="cta-actions">
+      <div class="cta-btn primary">Donate at chcc.org/donate</div>
+      <div class="cta-btn outline">Download Pledge Form</div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="ci-label">Website</div>
+        <div class="ci-value"><a href="#">chcc.org</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-label">Email</div>
+        <div class="ci-value"><a href="#">info@chcc.org</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="ci-label">Location</div>
+        <div class="ci-value">Charlotte, North Carolina</div>
+      </div>
+    </div>
+
+    <div class="bc-divider"></div>
+
+    <p class="bc-legal">
+      Charlotte Hindu Community Center (CHCC) is a 501(c)(3) tax-exempt nonprofit organization. All donations are tax-deductible to the fullest extent permitted by law. A copy of our financial statements is available upon request. &nbsp;·&nbsp; No goods or services were provided in exchange for your contribution unless otherwise noted. &nbsp;·&nbsp; © 2025 Charlotte Hindu Community Center.
+    </p>
+
+  </div>
+
+</body>
+</html>

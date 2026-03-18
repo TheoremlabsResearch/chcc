@@ -447,7 +447,7 @@ export default function GetInvolvedPage() {
               </h3>
             </div>
             <p className="text-muted text-sm mb-6 max-w-3xl">
-              Cultural mandals, language associations, devotional groups, and nonprofit yoga & wellness clubs are invited to join CHCC as Community Org Partners. Together we amplify reach, share programming, and build a unified South Charlotte Indian community hub.
+              Cultural mandals, language associations, devotional groups, and nonprofit yoga &amp; wellness clubs are invited to join CHCC as Community Org Partners. Together we amplify reach, share programming, and build a unified South Charlotte Indian community hub.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
               {communityOrgPartners.map((org) => (

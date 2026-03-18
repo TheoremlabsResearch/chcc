@@ -19,28 +19,28 @@ const departments = [
     description: 'School tours, enrollment inquiries, tuition, scholarships, and curriculum information.',
   },
   {
-    name: 'Gaushala & Programs',
+    name: 'Gaushala &amp; Programs',
     email: 'gaushala@chcc.org',
     phone: '(704) 555-0125',
     icon: '🐄',
     description: 'Gaushala visits, cow adoption, A2 milk CSA, and other program registrations.',
   },
   {
-    name: 'Donations & Development',
+    name: 'Donations &amp; Development',
     email: 'development@chcc.org',
     phone: '(704) 555-0126',
     icon: '💝',
     description: 'Donations, planned giving, corporate partnerships, stock gifts, and DAF inquiries.',
   },
   {
-    name: 'Volunteer & Ambassador',
+    name: 'Volunteer &amp; Ambassador',
     email: 'volunteer@chcc.org',
     phone: '(704) 555-0127',
     icon: '🤝',
     description: 'Volunteer opportunities, ambassador program applications, and coordination.',
   },
   {
-    name: 'Events & Rentals',
+    name: 'Events &amp; Rentals',
     email: 'events@chcc.org',
     phone: '(704) 555-0128',
     icon: '🎉',
@@ -203,10 +203,10 @@ export default function ContactPage() {
                         <option value="">Select department...</option>
                         <option>General Inquiries</option>
                         <option>Aum School Admissions</option>
-                        <option>Gaushala & Programs</option>
-                        <option>Donations & Development</option>
-                        <option>Volunteer & Ambassador</option>
-                        <option>Events & Rentals</option>
+                        <option>Gaushala &amp; Programs</option>
+                        <option>Donations &amp; Development</option>
+                        <option>Volunteer &amp; Ambassador</option>
+                        <option>Events &amp; Rentals</option>
                       </select>
                     </div>
                   </div>

@@ -296,7 +296,7 @@ export default function DonatePage() {
                     </button>
 
                     <p className="text-xs text-muted text-center mt-3">
-                      🔒 Secure & encrypted. Tax receipt emailed instantly.<br />
+                      🔒 Secure &amp; encrypted. Tax receipt emailed instantly.<br />
                       Cancel recurring gifts anytime.
                     </p>
                   </form>

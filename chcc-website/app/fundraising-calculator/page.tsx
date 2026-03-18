@@ -27,6 +27,20 @@ const LOAN_TYPES = [
   { key: 'vriddhi',  name: 'Vriddhi',     sanskrit: 'वृद्धि',     label: '4% Deferred Interest',       color: '#F47C36', rate: 0.04, forgiven: false },
 ]
 
+const TIERS_D = [
+  { name: 'Individual', fee: 150 },
+  { name: 'Family',     fee: 300 },
+  { name: 'Senior',     fee: 75  },
+  { name: 'Student',    fee: 50  },
+]
+
+const TIERS_E = [
+  { name: 'Community Org Partner',      desc: 'Mandals, Yoga clubs, Cultural groups', fee: 500    },
+  { name: 'Community Sponsor',          desc: 'Small business',                       fee: 2500   },
+  { name: 'Heritage Partner',           desc: 'Mid-size business',                    fee: 10000  },
+  { name: 'Founding Corporate Partner', desc: 'Major corporate',                      fee: 25000  },
+]
+
 const AMOUNTS = [50000, 100000, 150000]
 const TERMS   = [3, 5, 7]
 const YEARS   = [1, 2, 3, 5, 7]
@@ -45,7 +59,7 @@ function dollar(n: number) {
   return n === 0 ? '$0' : '$' + Math.round(Math.abs(n)).toLocaleString()
 }
 
-type Tab = 'A' | 'B' | 'C' | 'summary'
+type Tab = 'A' | 'B' | 'C' | 'D' | 'E' | 'summary'
 
 // ── Sub-components (defined OUTSIDE main component) ──────────────────
 
@@ -93,6 +107,12 @@ export default function FundraisingCalculator() {
     [[0,0,0],[0,0,0],[0,0,0]],
   ])
 
+  // state: Track D members per tier
+  const [dMembers, setDMembers] = useState<number[]>([0, 0, 0, 0])
+
+  // state: Track E partners per tier
+  const [ePartners, setEPartners] = useState<number[]>([0, 0, 0, 0])
+
   // ── Updaters ─────────────────────────────────────────────────────
   const updA = (i: number, v: number) => {
     const next = [...aDonors]
@@ -108,6 +128,16 @@ export default function FundraisingCalculator() {
     const next = cDonors.map(t => t.map(a => [...a]))
     next[ti][ai][trm] = v
     setCDonors(next)
+  }
+  const updD = (i: number, v: number) => {
+    const next = [...dMembers]
+    next[i] = v
+    setDMembers(next)
+  }
+  const updE = (i: number, v: number) => {
+    const next = [...ePartners]
+    next[i] = v
+    setEPartners(next)
   }
 
   // ── Track A totals ───────────────────────────────────────────────
@@ -170,10 +200,41 @@ export default function FundraisingCalculator() {
     [cDonors]
   )
 
+  // ── Track D totals ───────────────────────────────────────────────
+  const dAnnualYear1 = useMemo(
+    () => TIERS_D.reduce((sum, t, i) => sum + dMembers[i] * t.fee, 0),
+    [dMembers]
+  )
+  const dTotalMembers = useMemo(
+    () => dMembers.reduce((s, m) => s + m, 0),
+    [dMembers]
+  )
+  const dMonthlyEquiv = useMemo(() => dAnnualYear1 / 12, [dAnnualYear1])
+  // Cumulative by year = members × fee × year (flat retention)
+  const dCumByYear = useMemo(
+    () => YEARS.map(y => dAnnualYear1 * y),
+    [dAnnualYear1]
+  )
+
+  // ── Track E totals ───────────────────────────────────────────────
+  const eAnnualYear1 = useMemo(
+    () => TIERS_E.reduce((sum, t, i) => sum + ePartners[i] * t.fee, 0),
+    [ePartners]
+  )
+  const eTotalPartners = useMemo(
+    () => ePartners.reduce((s, p) => s + p, 0),
+    [ePartners]
+  )
+  // Cumulative by year = partners × fee × year (flat retention)
+  const eCumByYear = useMemo(
+    () => YEARS.map(y => eAnnualYear1 * y),
+    [eAnnualYear1]
+  )
+
   // ── Grand totals ─────────────────────────────────────────────────
   const grandByYear = useMemo(
-    () => YEARS.map((_, i) => aTotal + bCumByYear[i] + cCapital),
-    [aTotal, bCumByYear, cCapital]
+    () => YEARS.map((_, i) => aTotal + bCumByYear[i] + cCapital + dCumByYear[i] + eCumByYear[i]),
+    [aTotal, bCumByYear, cCapital, dCumByYear, eCumByYear]
   )
   const netByYear = useMemo(
     () => grandByYear.map((g, i) => g - cRepayByYear[i]),
@@ -189,6 +250,8 @@ export default function FundraisingCalculator() {
     if (t === 'A' && aTotal > 0) return fmt(aTotal)
     if (t === 'B' && bFullCommitment > 0) return fmt(bFullCommitment)
     if (t === 'C' && cCapital > 0) return fmt(cCapital)
+    if (t === 'D' && dAnnualYear1 > 0) return fmt(dAnnualYear1)
+    if (t === 'E' && eAnnualYear1 > 0) return fmt(eAnnualYear1)
     return null
   }
 
@@ -227,8 +290,8 @@ export default function FundraisingCalculator() {
 
       {/* Tabs */}
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto flex px-2">
-          {(['A', 'B', 'C', 'summary'] as Tab[]).map(t => (
+        <div className="max-w-7xl mx-auto flex px-2 overflow-x-auto">
+          {(['A', 'B', 'C', 'D', 'E', 'summary'] as Tab[]).map(t => (
             <button
               key={t}
               type="button"
@@ -533,6 +596,195 @@ export default function FundraisingCalculator() {
           </div>
         )}
 
+        {/* ══════════════════════════════ TRACK D ══════════════════════════════ */}
+        {tab === 'D' && (
+          <div>
+            <h2 className="font-heading text-2xl font-bold text-gray-900 mb-1">
+              Track D — CHCC Membership
+            </h2>
+            <p className="text-gray-500 text-sm mb-5">
+              Annual recurring memberships. Enter estimated members per tier — revenue renews each year (flat retention assumed).
+            </p>
+
+            <div className="bg-white rounded-xl border border-gray-200 overflow-hidden mb-5">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-indigo-600 text-white text-xs uppercase tracking-wide">
+                    <th className="text-left px-5 py-3">Membership Tier</th>
+                    <th className="text-right px-5 py-3">Annual Fee</th>
+                    <th className="text-center px-5 py-3"># Members</th>
+                    <th className="text-right px-4 py-3">Yr 1</th>
+                    <th className="text-right px-4 py-3">Yr 2</th>
+                    <th className="text-right px-4 py-3">Yr 3</th>
+                    <th className="text-right px-4 py-3">Yr 5</th>
+                    <th className="text-right px-5 py-3">Yr 7 Cumulative</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {TIERS_D.map((tier, i) => {
+                    const m = dMembers[i]
+                    const annualRev = m * tier.fee
+                    // cumulative = members × fee × year
+                    const yrCols = [1, 2, 3, 5].map(y => annualRev * y)
+                    const yr7 = annualRev * 7
+                    return (
+                      <tr key={tier.name} className="border-b border-gray-100 hover:bg-indigo-50">
+                        <td className="px-5 py-3">
+                          <span className="inline-block px-2.5 py-0.5 rounded text-xs font-bold bg-indigo-100 text-indigo-700">
+                            {tier.name}
+                          </span>
+                          <span className="ml-2 text-xs text-gray-400">{dollar(tier.fee)}/yr per member</span>
+                        </td>
+                        <td className="px-5 py-3 text-right font-heading font-bold text-indigo-600">{dollar(tier.fee)}</td>
+                        <td className="px-5 py-3 text-center">
+                          <NumInput value={dMembers[i]} onUpdate={v => updD(i, v)} />
+                        </td>
+                        {yrCols.map((val, ci) => (
+                          <td key={ci} className="px-4 py-3 text-right font-heading font-semibold text-gray-800 text-sm">
+                            {val > 0 ? dollar(val) : <span className="text-gray-300">—</span>}
+                          </td>
+                        ))}
+                        <td className="px-5 py-3 text-right font-heading font-bold text-indigo-600">
+                          {yr7 > 0 ? dollar(yr7) : <span className="text-gray-300">—</span>}
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+                <tfoot>
+                  <tr className="bg-indigo-600 text-white">
+                    <td colSpan={2} className="px-5 py-4 font-bold uppercase tracking-wide text-sm">Track D Totals</td>
+                    <td className="px-5 py-4 text-center font-bold">{dTotalMembers} members</td>
+                    {[1, 2, 3, 5].map(y => (
+                      <td key={y} className="px-4 py-4 text-right font-heading font-bold">
+                        {dAnnualYear1 * y > 0 ? dollar(dAnnualYear1 * y) : '—'}
+                      </td>
+                    ))}
+                    <td className="px-5 py-4 text-right font-heading text-lg font-bold">
+                      {dCumByYear[4] > 0 ? dollar(dCumByYear[4]) : '—'}
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+
+            <div className="grid grid-cols-4 gap-4">
+              <Card
+                label="Monthly Equivalent Revenue"
+                value={`${dollar(dMonthlyEquiv)}/mo`}
+                color="text-indigo-600"
+                sub="Annual fee ÷ 12"
+              />
+              <Card
+                label="Annual Revenue (Yr 1)"
+                value={dollar(dAnnualYear1)}
+                color="text-indigo-600"
+              />
+              <Card
+                label="Cumulative Year 7"
+                value={dollar(dCumByYear[4])}
+                color="text-indigo-600"
+                sub="Assuming flat annual renewal"
+              />
+              <Card
+                label="Total Members"
+                value={String(dTotalMembers)}
+                sub={dTotalMembers > 0 ? `${dollar(dAnnualYear1)}/yr combined` : undefined}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* ══════════════════════════════ TRACK E ══════════════════════════════ */}
+        {tab === 'E' && (
+          <div>
+            <h2 className="font-heading text-2xl font-bold text-gray-900 mb-1">
+              Track E — Community &amp; Corporate Partners
+            </h2>
+            <p className="text-gray-500 text-sm mb-5">
+              Annual recurring partnerships. Enter estimated partners per tier — revenue renews each year (flat retention assumed).
+            </p>
+
+            <div className="bg-white rounded-xl border border-gray-200 overflow-hidden mb-5">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-purple-600 text-white text-xs uppercase tracking-wide">
+                    <th className="text-left px-5 py-3">Partner Tier</th>
+                    <th className="text-right px-5 py-3">Annual Fee</th>
+                    <th className="text-center px-5 py-3"># Partners</th>
+                    <th className="text-right px-4 py-3">Yr 1</th>
+                    <th className="text-right px-4 py-3">Yr 2</th>
+                    <th className="text-right px-4 py-3">Yr 3</th>
+                    <th className="text-right px-4 py-3">Yr 5</th>
+                    <th className="text-right px-5 py-3">Yr 7 Cumulative</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {TIERS_E.map((tier, i) => {
+                    const p = ePartners[i]
+                    const annualRev = p * tier.fee
+                    const yrCols = [1, 2, 3, 5].map(y => annualRev * y)
+                    const yr7 = annualRev * 7
+                    return (
+                      <tr key={tier.name} className="border-b border-gray-100 hover:bg-purple-50">
+                        <td className="px-5 py-3">
+                          <div className="font-semibold text-gray-900">{tier.name}</div>
+                          <div className="text-xs text-gray-400 mt-0.5">{tier.desc}</div>
+                        </td>
+                        <td className="px-5 py-3 text-right font-heading font-bold text-purple-600">{dollar(tier.fee)}/yr</td>
+                        <td className="px-5 py-3 text-center">
+                          <NumInput value={ePartners[i]} onUpdate={v => updE(i, v)} />
+                        </td>
+                        {yrCols.map((val, ci) => (
+                          <td key={ci} className="px-4 py-3 text-right font-heading font-semibold text-gray-800 text-sm">
+                            {val > 0 ? dollar(val) : <span className="text-gray-300">—</span>}
+                          </td>
+                        ))}
+                        <td className="px-5 py-3 text-right font-heading font-bold text-purple-600">
+                          {yr7 > 0 ? dollar(yr7) : <span className="text-gray-300">—</span>}
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+                <tfoot>
+                  <tr className="bg-purple-600 text-white">
+                    <td colSpan={2} className="px-5 py-4 font-bold uppercase tracking-wide text-sm">Track E Totals</td>
+                    <td className="px-5 py-4 text-center font-bold">{eTotalPartners} partners</td>
+                    {[1, 2, 3, 5].map(y => (
+                      <td key={y} className="px-4 py-4 text-right font-heading font-bold">
+                        {eAnnualYear1 * y > 0 ? dollar(eAnnualYear1 * y) : '—'}
+                      </td>
+                    ))}
+                    <td className="px-5 py-4 text-right font-heading text-lg font-bold">
+                      {eCumByYear[4] > 0 ? dollar(eCumByYear[4]) : '—'}
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4">
+              <Card
+                label="Annual Revenue (Yr 1)"
+                value={dollar(eAnnualYear1)}
+                color="text-purple-600"
+              />
+              <Card
+                label="Cumulative Year 5"
+                value={dollar(eCumByYear[3])}
+                color="text-purple-600"
+                sub="Assuming flat annual renewal"
+              />
+              <Card
+                label="Total Partners"
+                value={String(eTotalPartners)}
+                sub={eTotalPartners > 0 ? `${dollar(eAnnualYear1)}/yr combined` : undefined}
+              />
+            </div>
+          </div>
+        )}
+
         {/* ══════════════════════════════ SUMMARY ══════════════════════════════ */}
         {tab === 'summary' && (
           <div>
@@ -561,6 +813,14 @@ export default function FundraisingCalculator() {
                 <div className="text-center">
                   <div className="text-xs text-gray-400 uppercase tracking-widest mb-0.5">Track C</div>
                   <div className="font-heading text-xl font-bold text-amber-700">{dollar(cCapital)}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xs text-gray-400 uppercase tracking-widest mb-0.5">Track D</div>
+                  <div className="font-heading text-xl font-bold text-indigo-600">{dollar(dCumByYear[4])}</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-xs text-gray-400 uppercase tracking-widest mb-0.5">Track E</div>
+                  <div className="font-heading text-xl font-bold text-purple-600">{dollar(eCumByYear[4])}</div>
                 </div>
                 <div className="text-right">
                   <div className="text-xs text-gray-400 uppercase tracking-widest mb-0.5">Total Projected</div>
@@ -596,7 +856,7 @@ export default function FundraisingCalculator() {
               <div className="px-5 py-3 bg-gray-800 text-white">
                 <span className="font-heading font-bold">Year-by-Year Capital Projection</span>
                 <span className="ml-3 text-xs text-white/50">
-                  Track A = one-time · Track B = cumulative receipts · Track C = capital in at Year 1
+                  Track A = one-time · Track B/D/E = cumulative · Track C = capital in at Year 1
                 </span>
               </div>
               <table className="w-full">
@@ -640,6 +900,28 @@ export default function FundraisingCalculator() {
                       </td>
                     ))}
                   </tr>
+                  <tr className="border-b border-gray-100 hover:bg-gray-50">
+                    <td className="px-5 py-3 flex items-center gap-2">
+                      <span className="bg-indigo-600 text-white text-xs font-bold px-2 py-0.5 rounded">D</span>
+                      <span className="text-sm">Memberships (Cumulative)</span>
+                    </td>
+                    {dCumByYear.map((v, i) => (
+                      <td key={i} className="px-4 py-3 text-right font-heading font-semibold text-indigo-600 text-sm">
+                        {v > 0 ? dollar(v) : <span className="text-gray-300">—</span>}
+                      </td>
+                    ))}
+                  </tr>
+                  <tr className="border-b border-gray-100 hover:bg-gray-50">
+                    <td className="px-5 py-3 flex items-center gap-2">
+                      <span className="bg-purple-600 text-white text-xs font-bold px-2 py-0.5 rounded">E</span>
+                      <span className="text-sm">Corp Partners (Cumulative)</span>
+                    </td>
+                    {eCumByYear.map((v, i) => (
+                      <td key={i} className="px-4 py-3 text-right font-heading font-semibold text-purple-600 text-sm">
+                        {v > 0 ? dollar(v) : <span className="text-gray-300">—</span>}
+                      </td>
+                    ))}
+                  </tr>
                   <tr className="border-b border-gray-200 bg-gray-50">
                     <td className="px-5 py-3 font-bold text-sm">Total Capital Raised</td>
                     {grandByYear.map((v, i) => (
@@ -670,7 +952,7 @@ export default function FundraisingCalculator() {
             </div>
 
             {/* Per-track summary cards */}
-            <div className="grid grid-cols-3 gap-5 mb-6">
+            <div className="grid grid-cols-3 gap-5 mb-5">
               <div className="bg-white rounded-xl p-5 border-t-4 border-orange-500 border border-gray-200">
                 <div className="text-xs text-orange-500 uppercase tracking-widest font-bold mb-3">Track A · One-Time</div>
                 <div className="font-heading text-3xl font-bold text-gray-900 mb-1">{dollar(aTotal)}</div>
@@ -692,6 +974,20 @@ export default function FundraisingCalculator() {
                 <div className="text-sm text-red-400">Max repayment: {dollar(cRepayByYear.reduce((m, v) => Math.max(m, v), 0))}</div>
               </div>
             </div>
+            <div className="grid grid-cols-2 gap-5 mb-6">
+              <div className="bg-white rounded-xl p-5 border-t-4 border-indigo-600 border border-gray-200">
+                <div className="text-xs text-indigo-600 uppercase tracking-widest font-bold mb-3">Track D · Memberships</div>
+                <div className="font-heading text-3xl font-bold text-gray-900 mb-1">{dollar(dCumByYear[4])}</div>
+                <div className="text-sm text-gray-400 mb-1">{dTotalMembers} members · annual renewal</div>
+                <div className="text-sm text-indigo-600 font-semibold">{dollar(dAnnualYear1)}/yr · {dollar(dMonthlyEquiv)}/mo equiv.</div>
+              </div>
+              <div className="bg-white rounded-xl p-5 border-t-4 border-purple-600 border border-gray-200">
+                <div className="text-xs text-purple-600 uppercase tracking-widest font-bold mb-3">Track E · Corp Partners</div>
+                <div className="font-heading text-3xl font-bold text-gray-900 mb-1">{dollar(eCumByYear[4])}</div>
+                <div className="text-sm text-gray-400 mb-1">{eTotalPartners} partners · annual renewal</div>
+                <div className="text-sm text-purple-600 font-semibold">{dollar(eAnnualYear1)}/yr · {dollar(eCumByYear[2])} by Yr 3</div>
+              </div>
+            </div>
 
             {/* Talking points */}
             {totalProjected > 0 ? (
@@ -704,6 +1000,8 @@ export default function FundraisingCalculator() {
                   <div>✦ <strong>Monthly recurring:</strong> {dollar(bMonthly)}/mo from {bDonors.reduce((s, d) => s + d, 0)} pledge donors</div>
                   <div>✦ <strong>Max loan repayment:</strong> {dollar(cRepayByYear.reduce((m, v) => Math.max(m, v), 0))}</div>
                   <div>✦ <strong>Best net by Yr 7:</strong> {dollar(netByYear.reduce((m, v) => Math.max(m, v), 0))}</div>
+                  <div>✦ <strong>Membership revenue (Yr 7):</strong> {dollar(dCumByYear[4])} from {dTotalMembers} members</div>
+                  <div>✦ <strong>Partner revenue (Yr 7):</strong> {dollar(eCumByYear[4])} from {eTotalPartners} partners</div>
                   {goalPct >= 100 && (
                     <div className="col-span-2 text-green-400 font-semibold">
                       ✓ This scenario fully funds Phase 1 — surplus: {dollar(totalProjected - GOAL)}
@@ -711,7 +1009,7 @@ export default function FundraisingCalculator() {
                   )}
                   {goalPct > 0 && goalPct < 100 && (
                     <div className="col-span-2 text-yellow-300">
-                      △ Gap to $2M: {dollar(GOAL - totalProjected)} — add more donors in Track A, B, or C
+                      △ Gap to $2M: {dollar(GOAL - totalProjected)} — add more donors in Track A, B, C, D, or E
                     </div>
                   )}
                 </div>
@@ -719,7 +1017,7 @@ export default function FundraisingCalculator() {
             ) : (
               <div className="bg-white rounded-xl p-10 border border-gray-200 text-center">
                 <div className="font-heading text-lg text-gray-400 mb-2">No numbers entered yet</div>
-                <p className="text-sm text-gray-400">Go to Track A, B, or C and enter donor counts to see projections here.</p>
+                <p className="text-sm text-gray-400">Go to Track A, B, C, D, or E and enter donor counts to see projections here.</p>
               </div>
             )}
           </div>

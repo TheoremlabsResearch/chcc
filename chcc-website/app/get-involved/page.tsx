@@ -136,7 +136,31 @@ const membershipTiers = [
   },
 ]
 
+const communityOrgPartners = [
+  { name: 'Charlotte Marathi Mandal (CMM)', type: 'Language & Cultural', location: 'Ballantyne / South Charlotte' },
+  { name: 'Shiv Shakti Dhol Tasha', type: 'Percussion & Performance', location: 'Charlotte Metro' },
+  { name: 'Satyanarayan Pooja Mandal', type: 'Spiritual & Devotional', location: 'South Charlotte' },
+  { name: 'Telugu Association of Charlotte (TAC)', type: 'Language & Cultural', location: 'Ballantyne / Matthews' },
+  { name: 'Tamil Cultural Association of Charlotte', type: 'Language & Cultural', location: 'South Charlotte' },
+  { name: 'Gujarati Samaj of Greater Charlotte', type: 'Language & Cultural', location: 'Charlotte Metro' },
+  { name: 'Chinmaya Mission Charlotte (CMC)', type: 'Vedanta & Spiritual Education', location: 'South Charlotte' },
+  { name: 'Charlotte Kannada Koota', type: 'Language & Cultural', location: 'South Charlotte' },
+  { name: 'Charlotte Malayalee Association', type: 'Language & Cultural', location: 'Charlotte Metro' },
+  { name: 'Charlotte Bengali Cultural Society', type: 'Language & Cultural', location: 'South Charlotte' },
+  { name: 'Isha Yoga Charlotte (Non-Profit)', type: 'Yoga & Wellness', location: 'South Charlotte' },
+  { name: 'Art of Living Charlotte Chapter', type: 'Yoga & Breathwork', location: 'Charlotte Metro' },
+  { name: 'Hindu Swayamsevak Sangh (HSS) Charlotte', type: 'Youth & Cultural Service', location: 'South Charlotte' },
+  { name: 'BAPS Swaminarayan Sanstha Charlotte', type: 'Spiritual & Community Service', location: 'Stallings / Indian Trail' },
+  { name: 'Indian Merchants Association of Charlotte', type: 'Business & Commerce', location: 'Charlotte Metro' },
+]
+
 const corporatePartners = [
+  {
+    tier: 'Community Org Partner',
+    amount: '$500/yr',
+    icon: '🏛️',
+    benefits: ['Listed on CHCC website as community ally', 'Co-hosted events & cultural programs', 'Shared member discounts', 'Invitation to inter-community roundtables'],
+  },
   {
     tier: 'Community Sponsor',
     amount: '$2,500/yr',
@@ -404,17 +428,46 @@ export default function GetInvolvedPage() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-charcoal/10 text-charcoal text-sm font-bold px-4 py-2 rounded-full mb-5">
               <Building size={14} />
-              Corporate Partnerships
+              Community &amp; Corporate Partnerships
             </div>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4">
               Partner With CHCC
             </h2>
             <p className="section-subtitle mx-auto">
-              Align your brand with Charlotte&apos;s fastest-growing community institution. Corporate partnerships offer employee engagement, community visibility, and cultural impact.
+              CHCC is stronger when Charlotte&apos;s Indian-American organizations unite. Whether you&apos;re a cultural mandal, a yoga club, or a corporation — there&apos;s a partnership tier built for you.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {/* Community Org Partners */}
+          <div className="bg-white rounded-2xl border border-light p-8 mb-10">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-2xl">🏛️</span>
+              <h3 className="text-xl font-heading font-bold text-charcoal">
+                Community Organization Partners — <span className="text-saffron">$500/yr</span>
+              </h3>
+            </div>
+            <p className="text-muted text-sm mb-6 max-w-3xl">
+              Cultural mandals, language associations, devotional groups, and nonprofit yoga & wellness clubs are invited to join CHCC as Community Org Partners. Together we amplify reach, share programming, and build a unified South Charlotte Indian community hub.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6">
+              {communityOrgPartners.map((org) => (
+                <div key={org.name} className="flex items-start gap-3 bg-ivory rounded-xl px-4 py-3 border border-light">
+                  <div className="w-2 h-2 rounded-full bg-saffron mt-2 flex-shrink-0" />
+                  <div>
+                    <div className="text-sm font-semibold text-charcoal leading-tight">{org.name}</div>
+                    <div className="text-xs text-muted mt-0.5">{org.type} · {org.location}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-muted italic">
+              These organizations are listed as illustrative examples of the South Charlotte Indian-American community ecosystem. CHCC welcomes all aligned community groups to inquire about partnership.
+            </p>
+          </div>
+
+          {/* Corporate tiers */}
+          <h3 className="text-xl font-heading font-bold text-charcoal text-center mb-6">Business &amp; Corporate Sponsorship Tiers</h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             {corporatePartners.map((partner) => (
               <div key={partner.tier} className="bg-white rounded-2xl shadow-card p-6 hover:shadow-card-hover hover:-translate-y-1 transition-all">
                 <div className="text-4xl mb-4">{partner.icon}</div>

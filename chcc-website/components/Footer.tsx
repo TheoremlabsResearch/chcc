@@ -20,7 +20,7 @@ const programLinks = [
   { label: 'Heritage Arts', href: '/programs#arts' },
   { label: 'Gaushala Programs', href: '/programs/gaushala' },
   { label: 'Senior Oasis', href: '/programs#senior' },
-  { label: 'Sewa Initiatives', href: '/programs#sewa' },
+  { label: 'Sewa Initiatives', href: '/get-involved#volunteer' },
   { label: 'Culinary Classes', href: '/programs#culinary' },
 ]
 

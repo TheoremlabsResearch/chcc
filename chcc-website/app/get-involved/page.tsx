@@ -188,8 +188,8 @@ export default function GetInvolvedPage() {
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1920&q=80"
-            alt="Volunteers smiling community service"
+            src="/images/program-sewa.jpg"
+            alt="Indian-American CHCC volunteers at a community food drive"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-charcoal/70" />
@@ -423,7 +423,7 @@ export default function GetInvolvedPage() {
       </section>
 
       {/* Corporate Partnerships */}
-      <section className="section-pad bg-ivory">
+      <section id="corporate" className="section-pad bg-ivory">
         <div className="container-pad">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-charcoal/10 text-charcoal text-sm font-bold px-4 py-2 rounded-full mb-5">

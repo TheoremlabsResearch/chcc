@@ -18,8 +18,8 @@ const programCategories = [
     accent: 'text-green',
     border: 'border-green/20',
     tagColor: 'bg-green/10 text-green',
-    imageId: '1488521787991-ed7bbaae773c',
-    imageAlt: 'Kids playing together outdoors',
+    imageSrc: '/images/program-aum-school.jpg',
+    imageAlt: 'Indian-American children learning in a bright classroom',
     programs: [
       {
         name: 'Aum School',
@@ -65,8 +65,8 @@ const programCategories = [
     accent: 'text-saffron-dark',
     border: 'border-saffron/20',
     tagColor: 'bg-saffron/10 text-saffron-dark',
-    imageId: '1599901860904-17e6ed7083a0',
-    imageAlt: 'Yoga class inside studio with multiple people',
+    imageSrc: '/images/program-yoga1.jpg',
+    imageAlt: 'Indian-American adults in outdoor yoga class at sunrise',
     programs: [
       {
         name: 'Hatha Yoga (All Levels)',
@@ -123,8 +123,8 @@ const programCategories = [
     accent: 'text-teak',
     border: 'border-teak/20',
     tagColor: 'bg-turmeric text-teak',
-    imageId: '1578632767115-351597cf2477',
-    imageAlt: 'Indian classical dance performance',
+    imageSrc: '/images/program-heritage-arts.jpg',
+    imageAlt: 'Young Indian-American woman performing Bharatanatyam',
     programs: [
       {
         name: 'Bharatanatyam',
@@ -181,8 +181,8 @@ const programCategories = [
     accent: 'text-green-dark',
     border: 'border-green/20',
     tagColor: 'bg-green/10 text-green-dark',
-    imageId: '1529156069898-49953e39b3ac',
-    imageAlt: 'Group of diverse happy people',
+    imageSrc: '/images/program-seniors.jpg',
+    imageAlt: 'Indian-American seniors enjoying chai and community',
     programs: [
       {
         name: 'Discover Our Roots',
@@ -228,8 +228,8 @@ const programCategories = [
     accent: 'text-teak',
     border: 'border-teak/30',
     tagColor: 'bg-teak/10 text-teak',
-    imageId: '1548767797-d8c844163c4c',
-    imageAlt: 'Cow in green field',
+    imageSrc: '/images/program-gaushala.jpg',
+    imageAlt: 'Child feeding a desi Gir cow at the Gaushala sanctuary',
     programs: [
       {
         name: '2498 Challenge',
@@ -275,8 +275,8 @@ const programCategories = [
     accent: 'text-saffron-dark',
     border: 'border-saffron/20',
     tagColor: 'bg-turmeric text-teak',
-    imageId: '1547592180-85f173990554',
-    imageAlt: 'Indian food cooking',
+    imageSrc: '/images/program-culinary.jpg',
+    imageAlt: 'Traditional Indian thali with sattvic vegetarian food',
     programs: [
       {
         name: 'Sattvic Cooking Classes',
@@ -338,7 +338,7 @@ export default function ProgramsPage() {
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1551292831-023188e78222?auto=format&fit=crop&w=1920&q=80"
+            src="/images/hero-programs.jpg"
             alt="Colorful cultural dance performance with people"
             className="w-full h-full object-cover"
           />
@@ -391,7 +391,7 @@ export default function ProgramsPage() {
             <div className="mb-10">
               <div className="relative h-48 rounded-2xl overflow-hidden mb-6">
                 <img
-                  src={`https://images.unsplash.com/photo-${category.imageId}?auto=format&fit=crop&w=1200&q=80`}
+                  src={category.imageSrc}
                   alt={category.imageAlt}
                   className="w-full h-full object-cover"
                 />

@@ -121,8 +121,8 @@ export default function DonatePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1920&q=80"
-            alt="People at community event interacting"
+            src="/images/story-potluck.jpg"
+            alt="Indian-American community potluck and celebration"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-saffron-dark/80" />

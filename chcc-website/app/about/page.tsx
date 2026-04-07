@@ -120,8 +120,8 @@ export default function AboutPage() {
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1920&q=80"
-            alt="People at a community event, interacting"
+            src="/images/hero-about.jpg"
+            alt="Indian-American community potluck and cultural fair"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-charcoal/70" />
@@ -218,8 +218,8 @@ export default function AboutPage() {
               <div className="space-y-5">
                 <div className="rounded-2xl overflow-hidden shadow-card">
                   <img
-                    src="https://images.unsplash.com/photo-1609701658892-bf67deee10b8?auto=format&fit=crop&w=800&q=80"
-                    alt="Indian cultural celebration"
+                    src="/images/story-founding.jpg"
+                    alt="CHCC founding community planning session"
                     className="w-full h-48 object-cover"
                   />
                 </div>
@@ -480,6 +480,32 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Community in Action Gallery */}
+      <section className="section-pad bg-cream">
+        <div className="container-pad">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-heading font-bold text-charcoal mb-4">Community in Action</h2>
+            <p className="section-subtitle mx-auto">Real moments from CHCC events and programs across Charlotte.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { src: '/images/HCC1.png', alt: 'CHCC community event in Charlotte' },
+              { src: '/images/HCC2.png', alt: 'CHCC gathering and celebration' },
+              { src: '/images/story-potluck.jpg', alt: 'Community potluck with Indian vegetarian food' },
+              { src: '/images/story-sewa-hands.jpg', alt: 'Hands passing food at a CHCC sewa food drive' },
+              { src: '/images/hero-homepage1.jpg', alt: 'CHCC outdoor community yoga gathering' },
+              { src: '/images/event-navratri.jpg', alt: 'Navratri Garba night celebration' },
+              { src: '/images/event-holi.jpg', alt: 'Holi festival of colors celebration' },
+              { src: '/images/event-aum-school-show.jpg', alt: 'Aum School children cultural performance' },
+            ].map(({ src, alt }) => (
+              <div key={src} className="aspect-square overflow-hidden rounded-2xl shadow-card">
+                <img src={src} alt={alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Partnerships */}
       <section id="partnerships" className="section-pad bg-ivory">
         <div className="container-pad">
@@ -512,6 +538,68 @@ export default function AboutPage() {
                 {partner}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Investor & Brochure Materials */}
+      <section className="section-pad bg-gradient-to-br from-charcoal to-green-dark">
+        <div className="container-pad">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-heading font-bold text-white mb-4">
+              Project Overview Materials
+            </h2>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto">
+              Review our campus overview and investor brief — designed for community leaders, donors, and institutional partners.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/10 border border-white/20 rounded-2xl overflow-hidden hover:shadow-xl transition-all group">
+              <div className="h-56 overflow-hidden">
+                <img
+                  src="/images/Overview.png"
+                  alt="CHCC Campus Overview — investor and donor brief"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-heading font-bold text-white mb-2">Campus Overview</h3>
+                <p className="text-white/60 text-sm mb-4">
+                  A visual summary of the CHCC 5-acre campus plan, program pillars, community impact, and development phases.
+                </p>
+                <a
+                  href="/images/Overview.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-saffron hover:bg-saffron-dark text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors"
+                >
+                  View Full Overview
+                </a>
+              </div>
+            </div>
+            <div className="bg-white/10 border border-white/20 rounded-2xl overflow-hidden hover:shadow-xl transition-all group">
+              <div className="h-56 overflow-hidden">
+                <img
+                  src="/images/Overview 1.png"
+                  alt="CHCC Investor Case — PDF brochure for major donors"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-heading font-bold text-white mb-2">Investor & Donor Brief</h3>
+                <p className="text-white/60 text-sm mb-4">
+                  Detailed financials, pledge options, economic impact projections, and naming opportunities for major donors and institutional partners.
+                </p>
+                <a
+                  href="/images/Overview 1.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-saffron hover:bg-saffron-dark text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors"
+                >
+                  View Investor Brief
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

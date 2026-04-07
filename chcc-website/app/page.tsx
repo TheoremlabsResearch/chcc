@@ -71,8 +71,8 @@ const programs = [
     tagColor: 'bg-green/10 text-green',
     href: '/programs/aum-school',
     highlight: 'Enrolling Now',
-    imageId: '1503454537195-1dcabb73ffb9',
-    imageAlt: 'Happy children learning in class',
+    imageSrc: '/images/program-aum-school.jpg',
+    imageAlt: 'Indian-American children learning Sanskrit in a bright classroom',
   },
   {
     title: 'Yoga & Wellness',
@@ -83,8 +83,8 @@ const programs = [
     tagColor: 'bg-saffron/10 text-saffron-dark',
     href: '/programs#yoga',
     highlight: 'Classes Weekly',
-    imageId: '1545389336-cf090694435e',
-    imageAlt: 'Outdoor group yoga class',
+    imageSrc: '/images/program-yoga.jpg',
+    imageAlt: 'Mixed-age group in outdoor yoga class',
   },
   {
     title: 'Gaushala',
@@ -95,8 +95,8 @@ const programs = [
     tagColor: 'bg-teak/10 text-teak',
     href: '/programs/gaushala',
     highlight: 'Visit & Volunteer',
-    imageId: '1548767797-d8c844163c4c',
-    imageAlt: 'Cow in green field',
+    imageSrc: '/images/program-gaushala.jpg',
+    imageAlt: 'Child feeding a gentle desi Gir cow in a lush pasture',
   },
   {
     title: 'Heritage Arts',
@@ -107,8 +107,8 @@ const programs = [
     tagColor: 'bg-turmeric text-teak',
     href: '/programs#arts',
     highlight: 'Auditions Open',
-    imageId: '1578632767115-351597cf2477',
-    imageAlt: 'Indian classical dance performance',
+    imageSrc: '/images/program-heritage-arts.jpg',
+    imageAlt: 'Indian-American woman performing Bharatanatyam classical dance',
   },
   {
     title: 'Senior Oasis',
@@ -119,8 +119,8 @@ const programs = [
     tagColor: 'bg-green/10 text-green',
     href: '/programs#senior',
     highlight: 'Free to Join',
-    imageId: '1529156069898-49953e39b3ac',
-    imageAlt: 'Group of diverse happy people',
+    imageSrc: '/images/program-seniors.jpg',
+    imageAlt: 'Indian-American seniors laughing over chai and a board game',
   },
   {
     title: 'Sewa Initiative',
@@ -129,10 +129,10 @@ const programs = [
     icon: '🤝',
     tag: 'Community Service',
     tagColor: 'bg-charcoal/10 text-charcoal',
-    href: '/programs#sewa',
+    href: '/get-involved#volunteer',
     highlight: 'Volunteer Now',
-    imageId: '1559027615-cd4628902d4a',
-    imageAlt: 'Volunteers smiling together',
+    imageSrc: '/images/program-sewa.jpg',
+    imageAlt: 'Indian-American volunteers packing food bags at a community drive',
   },
 ]
 
@@ -161,8 +161,8 @@ export default function HomePage() {
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1603988363-55a79df9aa8e?auto=format&fit=crop&w=1920&q=80"
-            alt="Community yoga outdoor group class"
+            src="/images/hero-homepage.jpg"
+            alt="Indian-American community gathering outdoors at golden hour"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-charcoal/70" />
@@ -366,7 +366,7 @@ export default function HomePage() {
               >
                 <div className="relative h-48 overflow-hidden rounded-t-2xl">
                   <img
-                    src={`https://images.unsplash.com/photo-${program.imageId}?auto=format&fit=crop&w=800&q=80`}
+                    src={program.imageSrc}
                     alt={program.imageAlt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -471,18 +471,18 @@ export default function HomePage() {
           <p className="text-muted text-center mb-10">A glimpse of our community in action</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              { id: '1558618666-fcd25c85cd64', alt: 'Holi festival people covered in colors' },
-              { id: '1548767797-d8c844163c4c', alt: 'Gaushala cows' },
-              { id: '1578632767115-351597cf2477', alt: 'Classical dance performance' },
-              { id: '1503454537195-1dcabb73ffb9', alt: 'Children in Aum School' },
-              { id: '1547592180-85f173990554', alt: 'Community kitchen cooking together' },
-              { id: '1559027615-cd4628902d4a', alt: 'Sewa volunteers smiling' },
-              { id: '1551292831-023188e78222', alt: 'Colorful cultural dance performance' },
-              { id: '1529156069898-49953e39b3ac', alt: 'Diverse community gathering' },
-            ].map(({ id, alt }) => (
-              <div key={id} className="aspect-square overflow-hidden rounded-xl">
+              { src: '/images/event-holi.jpg', alt: 'Holi festival — joyful color celebration' },
+              { src: '/images/event-gaushala-feed.jpg', alt: 'Families feeding desi cows at the Gaushala' },
+              { src: '/images/program-heritage-arts.jpg', alt: 'Bharatanatyam classical dance performance' },
+              { src: '/images/program-aum-school.jpg', alt: 'Children learning Sanskrit at Aum School' },
+              { src: '/images/story-potluck.jpg', alt: 'Community potluck with Indian vegetarian dishes' },
+              { src: '/images/program-sewa.jpg', alt: 'Volunteers at a CHCC food drive' },
+              { src: '/images/event-navratri.jpg', alt: 'Navratri Garba night celebration' },
+              { src: '/images/program-seniors.jpg', alt: 'Indian-American seniors sharing chai and laughter' },
+            ].map(({ src, alt }) => (
+              <div key={src} className="aspect-square overflow-hidden rounded-xl">
                 <img
-                  src={`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&q=80`}
+                  src={src}
                   alt={alt}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />

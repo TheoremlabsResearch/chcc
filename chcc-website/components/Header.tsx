@@ -25,9 +25,9 @@ const navItems: NavItem[] = [
     label: 'Facilities',
     children: [
       { label: 'Master Plan', href: '/facilities#master-plan', description: '5-acre campus vision' },
-      { label: 'Gaushala', href: '/facilities#gaushala', description: 'Desi cow sanctuary' },
-      { label: 'Wellness Wing', href: '/facilities#wellness', description: 'Yoga, Ayurveda & more' },
-      { label: 'Cultural & Education', href: '/facilities#cultural', description: 'Aum School & arts' },
+      { label: 'Gaushala Sanctuary', href: '/facilities#gaushala', description: 'Desi cow sanctuary & grounds' },
+      { label: 'Wellness Wing', href: '/facilities#wellness', description: 'Yoga, Ayurveda & arts' },
+      { label: 'Cultural & Education', href: '/facilities#cultural', description: 'Aum School & library' },
     ],
   },
   {
@@ -38,15 +38,25 @@ const navItems: NavItem[] = [
       { label: 'Heritage Arts', href: '/programs#arts', description: 'Dance, music, martial arts' },
       { label: 'Gaushala Programs', href: '/programs/gaushala', description: 'Cow sanctuary & campaigns' },
       { label: 'Senior Oasis', href: '/programs#senior', description: 'Programs for elders' },
+      { label: 'Sewa Initiatives', href: '/get-involved#volunteer', description: 'Community service programs' },
     ],
   },
   { label: 'Events', href: '/events' },
   {
+    label: 'Resources',
+    children: [
+      { label: 'Fundraising Brochure', href: '/brochure', description: 'Campaign overview & donation tiers' },
+      { label: 'Investor Case', href: '/investor', description: 'Financial model & loan program' },
+      { label: 'Fundraising Calculator', href: '/fundraising-calculator', description: 'Internal planning tool' },
+    ],
+  },
+  {
     label: 'Get Involved',
     children: [
-      { label: 'Volunteer', href: '/get-involved#volunteer', description: 'Give your time & talent' },
+      { label: 'Volunteer & Sewa', href: '/get-involved#volunteer', description: 'Give your time & talent' },
       { label: 'Ambassador Program', href: '/get-involved#ambassador', description: 'Lead in your community' },
       { label: 'Membership', href: '/get-involved#membership', description: 'Join the CHCC family' },
+      { label: 'Corporate Partners', href: '/get-involved#corporate', description: 'CSR & sponsorship tiers' },
     ],
   },
 ]

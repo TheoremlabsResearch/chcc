@@ -122,8 +122,8 @@ export default function AumSchoolPage() {
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=1920&q=80"
-            alt="Children happy in class learning"
+            src="/images/program-aum-school.jpg"
+            alt="Indian-American children learning Sanskrit in a bright classroom"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-charcoal/70" />
@@ -258,8 +258,8 @@ export default function AumSchoolPage() {
           </div>
           <div className="mb-10 rounded-2xl overflow-hidden shadow-card">
             <img
-              src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80"
-              alt="Young people dancing and performing cultural arts"
+              src="/images/facility-education1.jpg"
+              alt="Modern educational space at Aum School with natural light"
               className="w-full h-56 object-cover"
             />
           </div>

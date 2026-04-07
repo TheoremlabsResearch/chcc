@@ -21,8 +21,8 @@ const upcomingEvents = [
     featured: true,
     attendees: '800+ expected',
     icon: '🎨',
-    imageId: '1558618666-fcd25c85cd64',
-    imageAlt: 'Holi festival people covered in colors joyful',
+    imageSrc: '/images/event-holi.jpg',
+    imageAlt: 'Indian-American families celebrating Holi with colorful powder',
   },
   {
     title: 'Monthly Park Yoga — Every Saturday',
@@ -36,8 +36,8 @@ const upcomingEvents = [
     featured: false,
     attendees: '40–80 per session',
     icon: '🧘',
-    imageId: '1545389336-cf090694435e',
-    imageAlt: 'Outdoor yoga group class',
+    imageSrc: '/images/event-yoga-workshop.jpg',
+    imageAlt: 'Morning yoga workshop with participants in Child\'s Pose',
   },
   {
     title: 'Vedanta Study Circle — March Session',
@@ -51,8 +51,8 @@ const upcomingEvents = [
     featured: false,
     attendees: '25–40 per session',
     icon: '📚',
-    imageId: '1602621585530-8c34d41e22e0',
-    imageAlt: 'People doing Garba Navratri dance circle',
+    imageSrc: '/images/event-navratri.jpg',
+    imageAlt: 'Indian-American community celebrating Navratri Garba',
   },
   {
     title: 'Gaushala Interest Meeting & Info Session',
@@ -66,8 +66,8 @@ const upcomingEvents = [
     featured: false,
     attendees: '50+ expected',
     icon: '🐄',
-    imageId: '1548767797-d8c844163c4c',
-    imageAlt: 'Cow in green field',
+    imageSrc: '/images/event-gaushala-feed.jpg',
+    imageAlt: 'Families feeding cows at the CHCC Gaushala sanctuary',
   },
   {
     title: 'Aum School Open House & Admissions Fair',
@@ -81,8 +81,8 @@ const upcomingEvents = [
     featured: false,
     attendees: '100+ expected',
     icon: '🏫',
-    imageId: '1503454537195-1dcabb73ffb9',
-    imageAlt: 'Children in class learning',
+    imageSrc: '/images/event-aum-school-show.jpg',
+    imageAlt: 'Aum School children performing at cultural show',
   },
 ]
 
@@ -165,8 +165,8 @@ export default function EventsPage() {
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80"
-            alt="Holi festival people covered in colors joyful"
+            src="/images/event-holi.jpg"
+            alt="Indian-American families celebrating Holi with colorful powder"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-charcoal/70" />
@@ -212,7 +212,7 @@ export default function EventsPage() {
                 )}
                 <div className="relative h-40 overflow-hidden">
                   <img
-                    src={`https://images.unsplash.com/photo-${event.imageId}?auto=format&fit=crop&w=900&q=80`}
+                    src={event.imageSrc}
                     alt={event.imageAlt}
                     className="w-full h-full object-cover"
                   />

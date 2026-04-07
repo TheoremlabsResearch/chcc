@@ -97,8 +97,8 @@ export default function GaushalaPage() {
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=1920&q=80"
-            alt="Cow in green field"
+            src="/images/program-gaushala.jpg"
+            alt="Child feeding a gentle desi Gir cow at the CHCC Gaushala"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-charcoal/70" />
@@ -161,8 +161,8 @@ export default function GaushalaPage() {
         <div className="container-pad">
           <div className="mb-10 rounded-2xl overflow-hidden shadow-card">
             <img
-              src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80"
-              alt="Peaceful cows grazing"
+              src="/images/event-gaushala-feed1.jpg"
+              alt="Families visiting and feeding cows at the CHCC Gaushala sanctuary"
               className="w-full h-64 object-cover"
             />
           </div>

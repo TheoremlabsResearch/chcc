@@ -10,15 +10,15 @@ export const metadata: Metadata = {
 
 const wings = [
   {
-    id: 'outdoor',
+    id: 'gaushala',
     label: 'Outdoor Campus',
     icon: '🌿',
     color: 'bg-green/15 border-green/30',
     accent: 'text-green',
     accentBg: 'bg-green',
     gridPos: 'col-span-2',
-    imageId: '1416879595882-3373a0480b5b',
-    imageAlt: 'Hands gardening in community garden',
+    imageSrc: '/images/facility-outdoor.jpg',
+    imageAlt: 'Community garden and Gaushala sanctuary on the CHCC campus grounds',
     spaces: [
       { name: 'Gaushala Sanctuary', size: '2 acres', desc: 'Desi cow shelter, organic pasture, compost garden' },
       { name: 'Community Garden', size: '0.5 acres', desc: 'Medicinal herbs, Ayurvedic plants, seasonal vegetables' },
@@ -28,15 +28,15 @@ const wings = [
     ],
   },
   {
-    id: 'wingA',
+    id: 'cultural',
     label: 'Wing A — Education',
     icon: '📚',
     color: 'bg-saffron/10 border-saffron/30',
     accent: 'text-saffron-dark',
     accentBg: 'bg-saffron',
     gridPos: 'col-span-1',
-    imageId: '1503454537195-1dcabb73ffb9',
-    imageAlt: 'Children in class engaged and smiling',
+    imageSrc: '/images/facility-education.jpg',
+    imageAlt: 'Modern educational wing with children working in a warm bright classroom',
     spaces: [
       { name: 'Aum School Classrooms', size: '12 rooms', desc: 'K–8 smart classrooms with flexible learning layouts' },
       { name: 'Pathashala Hall', size: '1 large room', desc: 'Sunday school, shloka recitation, group puja space' },
@@ -46,15 +46,15 @@ const wings = [
     ],
   },
   {
-    id: 'wingB',
+    id: 'wellness',
     label: 'Wing B — Wellness & Arts',
     icon: '🧘',
     color: 'bg-turmeric/40 border-teak/20',
     accent: 'text-teak',
     accentBg: 'bg-teak',
     gridPos: 'col-span-1',
-    imageId: '1545389336-cf090694435e',
-    imageAlt: 'Outdoor yoga group class',
+    imageSrc: '/images/facility-wellness.jpg',
+    imageAlt: 'High-ceilinged yoga and dance studio with hardwood floors and natural light',
     spaces: [
       { name: 'Kalari Training Hall', size: '2,000 sq ft', desc: 'Traditional red mud floor, weapon storage, training equipment' },
       { name: 'Mallakhamba Studio', size: '1,200 sq ft', desc: 'High ceilings for pole gymnastics, rope training, mats' },
@@ -71,8 +71,8 @@ const wings = [
     accent: 'text-saffron',
     accentBg: 'bg-saffron-dark',
     gridPos: 'col-span-1',
-    imageId: '1565299624946-b28f40a0ae38',
-    imageAlt: 'Indian vegetarian food',
+    imageSrc: '/images/facility-culinary.jpg',
+    imageAlt: 'Sattvic community kitchen with staff plating vegetarian food',
     spaces: [
       { name: 'Sattvic Food Court', size: '3,000 sq ft', desc: 'Community dining, sattvic menu, teaching kitchen, event catering' },
       { name: 'A2 Milk Juice Bar', size: '600 sq ft', desc: 'Fresh A2 lassi, ayurvedic tonics, herbal teas, smoothies' },
@@ -88,8 +88,8 @@ const wings = [
     accent: 'text-charcoal',
     accentBg: 'bg-charcoal',
     gridPos: 'col-span-1',
-    imageId: '1573497019940-1c28c88b4f3e',
-    imageAlt: 'People at community event interacting',
+    imageSrc: '/images/facility-mandir.jpg',
+    imageAlt: 'Multi-faith Mandir and auditorium with warm amber lighting',
     spaces: [
       { name: 'Multi-faith Mandir', size: '4,000 sq ft', desc: 'Sanctuaries for multiple deities, traditional Shilpa Shastra design' },
       { name: 'Auditorium', size: '500 seats', desc: 'Performance hall for cultural shows, lectures, graduations, weddings' },
@@ -115,8 +115,8 @@ export default function FacilitiesPage() {
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1511632765153-94173a6b22a4?auto=format&fit=crop&w=1920&q=80"
-            alt="Large community gathering, people socializing"
+            src="/images/hero-facilities.jpg"
+            alt="Aerial view of the CHCC 5-acre campus with green lawns and modern buildings"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-charcoal/70" />
@@ -136,7 +136,7 @@ export default function FacilitiesPage() {
       </section>
 
       {/* Campus Overview */}
-      <section className="section-pad bg-cream">
+      <section id="master-plan" className="section-pad bg-cream">
         <div className="container-pad">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4">
@@ -241,7 +241,7 @@ export default function FacilitiesPage() {
             <div className="mb-8">
               <div className="relative h-48 rounded-2xl overflow-hidden mb-6 shadow-card">
                 <img
-                  src={`https://images.unsplash.com/photo-${wing.imageId}?auto=format&fit=crop&w=1200&q=80`}
+                  src={wing.imageSrc}
                   alt={wing.imageAlt}
                   className="w-full h-full object-cover"
                 />
